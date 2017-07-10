@@ -3,7 +3,7 @@ layout: post
 title: Big Bother
 categories: JavaScript Java Processing
 image: images/big-bother-00.png
-excerpt: <em>Big Bother</em> has an eye for eveyone
+excerpt: An interactive installation
 ---
 
 _Big Bother_ (sic) is a generative sketch that features an eye on a large screen. This eye has the ability to mutate a little when it detects movement around: a new pupil appears to follow every “target”, with the aim to follow each watcher individually.
