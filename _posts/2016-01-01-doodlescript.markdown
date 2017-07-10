@@ -6,6 +6,7 @@ categories: Java Processing
 image: images/doodlescript-03.png
 categories: Angular Android IoT
 excerpt: How would computer programming look like if we could reinvent it now from the ground up?
+bright: true
 ---
 How would computer programming look like if we could reinvent it now from the ground up?
 
