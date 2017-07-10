@@ -4,7 +4,7 @@ title:  Garbuix
 date:   2014-01-01
 categories: Java Processing
 image: images/garbuix-00.png
-excerpt: Exploring diverse patterns in 2D particle systems, using Processing
+excerpt: Exploring diverse patterns in 2D particle systems,<br>using Processing
 ---
 Exploring diverse patterns in 2D particle systems, using Processing.
 

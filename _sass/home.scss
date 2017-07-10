@@ -15,9 +15,6 @@
       position: relative;
       overflow: hidden;
       background-color: #DDD;
-      img {
-        transition: transform 1s;
-      }
       &:after {
         content: '';
         display: block;
@@ -34,9 +31,6 @@
       background-color: transparent;
       .post-link {
         transform: rotateY(-10deg);
-      }
-      img {
-        //transform: scale(1.1);
       }
       .post-meta,
       .excerpt {
@@ -79,6 +73,10 @@
 
   .excerpt {
     position: absolute;
-    bottom: 15px;
+    top: 50%;
+    left: 30px;
+    right: 30px;
+    transform: translateY(-50%);
+    text-align: center;
   }
 }
