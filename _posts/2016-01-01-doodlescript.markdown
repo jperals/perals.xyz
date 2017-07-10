@@ -3,7 +3,7 @@ layout: post
 title:  DoodleScript
 date:   2016-01-01
 categories: Java Processing
-image: images/doodlescript-03.png
+image: images/doodlescript-00.png
 categories: Angular Android IoT
 excerpt: How would computer programming look like if we could reinvent it now from the ground up?
 bright: true

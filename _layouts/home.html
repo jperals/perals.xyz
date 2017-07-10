@@ -13,7 +13,7 @@ layout: default
           {% assign date_format = site.minima.date_format | default: "%Y" %}
           <h2>
             {{ post.title | escape }}
-            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <div class="post-meta">{{ post.date | date: date_format }}</div>
           </h2>
           <div class="image">
             <img src="{{ post.image }}">

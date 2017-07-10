@@ -1,5 +1,9 @@
 .post-list > .post {
   position: relative;
+  .post-meta {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
   .image {
     position: relative;
     overflow: hidden;
@@ -17,24 +21,27 @@
       opacity: 0;
       transition: opacity 0.5s;
     }
-    &:hover {
-      img {
-        transform: scale(1.1);
-      }
-      &:after {
-        opacity: 0.5;
-      }
-    }
   }
-  h2,
-  .excerpt {
-    color: white;
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+    .post-meta,
+    .image:after {
+      opacity: 0.5;
+    }
   }
   h2 {
     z-index: 10;
   }
+  h2,
+  .post-meta,
+  .excerpt {
+    color: white;
+  }
   &.bright {
     h2,
+    .post-meta,
     .excerpt {
       color: black;
     }
