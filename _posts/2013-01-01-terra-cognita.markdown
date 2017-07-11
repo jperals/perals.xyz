@@ -9,7 +9,11 @@ excerpt: A visualization of the city as I have experienced it
 
 As I moved to Berlin in 2012, I started tracking my movements and then wrote an OpenFrameworks app that let me <em>visualize my process of getting to know a new place</em>.
 
+&nbsp;
+
 <iframe src="//player.vimeo.com/video/79570556" height="632" width="100%" allowfullscreen="" frameborder="0"></iframe>
+
+&nbsp;
 
 My walkabouts were rendered at high speed mapping the speed to colours, so one can even tell where and when I had been commuting with the train (red), walking (green), taking a tram (purple) or even riding a bike (blue).
 

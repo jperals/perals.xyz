@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article class="post about-page">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="post-content">
+    {% if page.profilepic %}
+    <img class="profile-picture" src="{{ page.profilepic }}">
+    {% endif %}
+    <div class="post-content-inner{% if page.profilepic %} narrow{% endif %}">
+      {{ content }}
+    </div>
+  </div>
+
+</article>

@@ -1,0 +1,18 @@
+@media screen and (min-width: 769px) {
+
+  .about-page {
+    position: relative;
+    .profile-picture {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 250px;
+      max-width: 100%;
+    }
+    .post-content-inner.narrow {
+      max-width: calc(100% - 250px);
+    }
+  }
+
+}
