@@ -14,7 +14,7 @@
     .image {
       position: relative;
       overflow: hidden;
-      background-color: #DDD;
+      background-color: #E8E8E8;
       &:after {
         content: '';
         display: block;
@@ -59,7 +59,7 @@
       }
       &.gradient {
         .image {
-          background: linear-gradient(#DDD, #DDD 30%, transparent);
+          background: linear-gradient(#B9BBCC, #B9BBCC 50%, transparent);
         }
       }
     }
