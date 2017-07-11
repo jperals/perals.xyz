@@ -1,19 +1,8 @@
 .post-list {
   > .post {
-    perspective: 2000px;
     position: relative;
-    .post-link {
-      transform-origin: left center;
-      transition: transform 0.5s;
-    }
-    .post-meta,
-    .excerpt {
-      opacity: 0;
-      transition: opacity 0.5s;
-    }
     .image {
       position: relative;
-      overflow: hidden;
       background-color: #E8E8E8;
       &:after {
         content: '';
@@ -23,21 +12,7 @@
         width: 100%;
         height: 100%;
         background-color: black;
-        opacity: 0;
-        transition: opacity 0.5s;
-      }
-    }
-    &:hover {
-      background-color: transparent;
-      .post-link {
-        transform: rotateY(-10deg);
-      }
-      .post-meta,
-      .excerpt {
-        opacity: 1
-      }
-      .image:after {
-        opacity: 0.75;
+        opacity: 0.5;
       }
     }
     h2 {
@@ -49,18 +24,9 @@
     .excerpt {
       color: white;
     }
-    &.bright {
-      h2 {
-        color: black;
-        transition: color 0.5s;
-      }
-      &:hover h2 {
-        color: white;
-      }
-      &.gradient {
-        .image {
-          background: linear-gradient(#B9BBCC, #B9BBCC 50%, transparent);
-        }
+    &.gradient {
+      .image {
+        background: linear-gradient(#B9BBCC, #B9BBCC 50%, transparent);
       }
     }
   }
@@ -78,10 +44,12 @@
 
   .excerpt {
     position: absolute;
-    top: 50%;
+    text-align: center;
     left: 30px;
     right: 30px;
-    transform: translateY(-50%);
-    text-align: center;
   }
 }
+
+@import './home-s.scss';
+@import './home-m.scss';
+@import './home-fine-pointer';

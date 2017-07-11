@@ -1,0 +1,9 @@
+@media (min-width: 641px) {
+  .excerpt {
+    position: absolute;
+    bottom: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+}
