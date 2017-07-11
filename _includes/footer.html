@@ -8,6 +8,7 @@
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li>
+            <p>{{ site.description | escape }}</p>
             {% if site.author %}
               {{ site.author | escape }}
             {% else %}
@@ -37,7 +38,6 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
       </div>
     </div>
 
