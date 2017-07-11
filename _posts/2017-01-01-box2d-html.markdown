@@ -1,0 +1,14 @@
+---
+layout: post
+title: Box2D + HTML
+date: 2017-07-01
+categories: JavaScript Box2D physics HTML
+image: images/box2d-html-00.png
+excerpt: Because why not?
+bright: true
+gradient: true
+---
+
+Who said HTML can't have physics?
+
+<iframe style="height: 712px; width: 100%" src="https://codepen.io/jperals/full/VWvPYL/"></iframe>

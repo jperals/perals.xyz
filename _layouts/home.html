@@ -8,7 +8,7 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts %}
-      <li class="post{%if post.bright %} bright{%endif%}">
+      <li class="post{%if post.bright %} bright{%endif%}{%if post.gradient %} gradient{%endif%}">
         <a class="post-link" href="{{ post.url | relative_url }}">
           {% assign date_format = site.minima.date_format | default: "%Y" %}
           <h2>

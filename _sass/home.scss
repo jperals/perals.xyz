@@ -57,6 +57,11 @@
       &:hover h2 {
         color: white;
       }
+      &.gradient {
+        .image {
+          background: linear-gradient(#DDD, #DDD 30%, transparent);
+        }
+      }
     }
   }
 
