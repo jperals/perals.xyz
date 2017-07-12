@@ -8,6 +8,7 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts %}
+    {%unless post.inactive %}
       <li class="post{%if post.bright %} bright{%endif%}{%if post.gradient %} gradient{%endif%}">
         <a class="post-link" href="{{ post.url | relative_url }}">
           {% assign date_format = site.minima.date_format | default: "%Y" %}
@@ -21,6 +22,7 @@ layout: default
           <p class="excerpt">{{ post.excerpt }}</p>
         </a>
       </li>
+    {% endunless %}
     {% endfor %}
   </ul>
 
