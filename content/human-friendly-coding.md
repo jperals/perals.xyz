@@ -4,7 +4,7 @@ date: 2018-07-20T10:44:39+02:00
 draft: false
 ---
 
-If you write code, it's important to remember that it is going to be read not just by computers but also by humans. If you just wrote something that _works_ (i.e, runs as expected) but that's unclear to read, that code is not ready, it needs more work.
+If you write code, it's important to remember that it is going to be read not just by computers but also by humans. If you just wrote something that _works_ in the sense that it runs as expected, but that's not nice to read and unclear how to extend, it's _not_ ready.
 
 Making code more readable is making it not only more maintainable and flexible but also more inclusive. We can think of programming languages and frameworks as design products that should have the aim to let us do as much as possible with as little effort as possible.
 
