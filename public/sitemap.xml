@@ -3,22 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>/design-and-development/</loc>
+    <lastmod>2018-07-20T11:04:31+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/react/</loc>
+    <lastmod>2018-07-20T10:59:18+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/vue/</loc>
+    <lastmod>2018-07-20T10:58:05+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/django/</loc>
+    <lastmod>2018-07-20T10:57:27+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/human-friendly-coding/</loc>
+    <lastmod>2018-07-20T10:44:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/dont-send-files/</loc>
+    <lastmod>2018-07-20T10:27:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
     <lastmod>2018-07-20T09:40:04+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/home/</loc>
-    <lastmod>2018-07-20T09:36:40+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   
