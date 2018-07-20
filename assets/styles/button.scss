@@ -1,0 +1,28 @@
+.button {
+  border-radius: 4px;
+  padding: .6em;
+  transition: color 200ms, background-color 200ms;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.subtle-button,
+.subtle-button:link {
+  @extend .button;
+  color: lightgray;
+  &:hover {
+    background-color: rgb(240, 240, 240);
+    color: gray;
+  }
+  &.back-button {
+    padding: .3em .6em .3em 0;
+  }
+  &.back-button:before {
+    content: '〈 ';
+  }
+  &:not(.back-button):after {
+    content: ' ⟩';
+  }
+}
+

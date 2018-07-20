@@ -1,12 +1,29 @@
 {{ partial "header.html" . }}
-<section class="main">
+<section class="main home">
     <div class="container">
         <div class="content">
-            {{ if .Content }}
-            <div class="markdown">
-                {{ .Content }}
+            <div class="intro">
+                {{ if .Content }}
+                {{ if .Site.Params.gravatar }}
+                <img class="avatar" src="https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=50" rcset="https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=100 2x, https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=150 3x, https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=200 4x">
+                {{ else if .Site.Params.avatar }}
+                {{ $.Scratch.Add "srcset" (slice (printf "%s 1x" (.Site.Params.avatar|absURL))) }}
+                {{ $directory := replaceRE "^(.*)/[^/]+$" "$1" .Site.Params.avatar }}
+                {{ $basename := replaceRE "^.*/([^./]+).*$" "$1" .Site.Params.avatar }}
+                {{ $extension := replaceRE "^.*/[^.]+\\.([^.]+)$" "$1" .Site.Params.avatar }}
+                {{ range (readDir (printf "static/%s" $directory)) }}
+                {{ if findRE (printf "^%s-\\d+x\\.%s$" $basename $extension) .Name }}
+                {{ $.Scratch.Add "srcset" (slice (replaceRE (printf "^(%s)-(\\d+x)\\.(%s)$" $basename $extension) (printf "%s/$1-$2.$3 $2" ($directory|absURL)) .Name)) }}
+                {{ end }}
+                {{ end }}
+                {{ $srcset := delimit ($.Scratch.Get "srcset") "," }}
+                <img class="avatar" src="/{{ .Site.Params.avatar }}" {{ printf "srcset=%q" $srcset | safeHTMLAttr }}>
+                {{ end }}
+                <div class="markdown">
+                    {{ .Content }}
+                </div>
+                {{ end }}
             </div>
-            {{ end }}
             {{ $totalpostscount := len (.Data.Pages) }}
             {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
             {{ if gt $latestpostscount 0 }}
@@ -24,6 +41,21 @@
                 {{ end }}
             </ul>
             {{ end }}
+            <div class="page-heading">
+                {{ i18n "alsoSee" }}
+            </div>
+                <ul>
+                    <li>
+                        {{ if .Site.Params.projects_url }}
+                        <a {{ printf "href=%q" (.Site.Params.projects_url  | relLangURL) | safeHTMLAttr }}>{{ i18n "someProjects" }}</a>
+                        {{ end }}
+                    </li>
+                    <li>
+                        {{ if .Site.Params.linkedin_url }}
+                        <a {{ printf "href=%q" (.Site.Params.linkedin_url  | relLangURL) | safeHTMLAttr }}>LinkedIn</a>
+                        {{ end }}
+                    </li>
+                </ul>
         </div>
     </div>
 </section>

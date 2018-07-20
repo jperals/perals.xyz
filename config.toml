@@ -1,4 +1,9 @@
-baseURL = "http://example.org/"
+baseURL = ""
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Joan Perals"
 theme = "cocoa"
+
+[params]
+avatar = "img/profile-color-transparent-bg.png"
+projects_url = "https://perals.xyz"
+linkedin_url = "https://linkedin.com/in/joanperalstresserra"

@@ -2,3 +2,18 @@
 
 - id: someThoughtsAbout
   translation: 'Some thoughts about:'
+
+- id: back
+  translation: Back
+
+- id: someProjects
+  translation: Some projects
+
+- id: more
+  translation: More
+
+- id: links
+  translation: Links
+
+- id: alsoSee
+  translation: 'Also see:'
