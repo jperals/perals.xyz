@@ -1,17 +1,35 @@
+.about-page {
+  .profile-picture {
+    border-radius: 50%;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    background-color: rgb(234, 231, 242);
+    display: block;
+    max-width: 100%;
+  }
+}
+
 @media screen and (min-width: 769px) {
 
   .about-page {
-    position: relative;
+    .post-content {
+      display: flex;
+      flex-direction: row-reverse;
+    }
     .profile-picture {
       display: block;
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 250px;
-      max-width: 100%;
+      margin-left: 3em;
+      width: 160px;
+      height: 160px;
     }
-    .post-content-inner.narrow {
-      max-width: calc(100% - 250px);
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .about-page {
+    .profile-picture {
+      margin: 0 auto 2em;
     }
   }
 

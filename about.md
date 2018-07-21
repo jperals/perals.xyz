@@ -2,7 +2,7 @@
 layout: about
 title: Hi!
 permalink: /about/
-profilepic: ../images/self.jpg
+profilepic: ../images/profile-color-transparent-bg.png
 ---
 
 My name is Joan Perals. I am a Catalan living and working in Berlin as a Creative Technologist at [IXDS](https://www.ixds.com) since 2012.
