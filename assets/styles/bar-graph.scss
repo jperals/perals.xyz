@@ -1,0 +1,33 @@
+@import 'variables';
+
+.technologies {
+  color: $gray-light;
+  padding-top: 1em;
+  .tag, .experience-time {
+    font-size: 8.5pt;
+    color: #999 !important;
+    padding: .3em .6em .35em .6em;
+  }
+  li {
+    position: relative;
+  }
+  .experience-time.overflows {
+    position: absolute;
+  }
+  .tag {
+    background-color: #E8E8E8 !important;
+    border-radius: 5px;
+    color: #888 !important;
+  }
+  .technologies-stats {
+    text-align: right;
+    .tag {
+      display: inline-block;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    li {
+      margin-bottom: 1em;
+    }
+  }
+}

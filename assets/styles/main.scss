@@ -1,5 +1,6 @@
 @import './button.scss';
 @import './home.scss';
+@import './bar-graph.scss';
 
 ul {
   padding: 0;
@@ -10,7 +11,7 @@ section.main .container .content {
     border-radius: 50%;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
   }
-  ul {
+  ul.inline {
     font-size: 0;
   }
 }
