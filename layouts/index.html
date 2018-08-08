@@ -47,12 +47,12 @@
                 <ul>
                     <li>
                         {{ if .Site.Params.projects_url }}
-                        <a {{ printf "href=%q" (.Site.Params.projects_url  | relLangURL) | safeHTMLAttr }}>{{ i18n "someProjects" }}</a>
+                        <a {{ printf "href=%q" .Site.Params.projects_url | safeHTMLAttr }}>{{ i18n "someProjects" }}</a>
                         {{ end }}
                     </li>
                     <li>
                         {{ if .Site.Params.linkedin_url }}
-                        <a {{ printf "href=%q" (.Site.Params.linkedin_url  | relLangURL) | safeHTMLAttr }}>LinkedIn</a>
+                        <a {{ printf "href=%q" .Site.Params.linkedin_url  | safeHTMLAttr }}>LinkedIn</a>
                         {{ end }}
                     </li>
                 </ul>
