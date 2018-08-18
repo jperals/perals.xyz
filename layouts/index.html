@@ -27,6 +27,10 @@
             {{ $totalpostscount := len (.Data.Pages) }}
             {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
             {{ if gt $latestpostscount 0 }}
+            <div class="page-heading">
+                <h2 class="text-center">Professional Experience</h2>
+                {{ partial "professional_experience.html" }}
+            </div>
             <div class="page-heading">{{ i18n "someThoughtsAbout" }}</div>
             <ul class="inline">
                 {{ range (first $latestpostscount ( .Data.Pages.ByPublishDate.Reverse )) }}
@@ -41,61 +45,6 @@
                 {{ end }}
             </ul>
             {{ end }}
-            <div class="page-heading">
-                <h2 class="text-center">Professional Experience</h2>
-
-                <div class="row graph">
-                    <div class="col-xs-12">
-                        <div class="technologies">
-                            <ul class="technologies-stats">
-                                <li>
-                                    <span class="experience-time">3.5 years</span><span class="tag" style="min-width:35%">Angular</span>
-                                </li>
-                                <li>
-                                    <span class="experience-time overflows">10 years</span><span class="tag" style="min-width:100%">CSS</span>
-                                </li>
-                                <li>
-                                    <span class="experience-time">1 year</span><span class="tag" style="min-width:10%">Django</span>
-                                </li>
-                                <li>
-                                    <span class="experience-time">1.5 years</span><span class="tag" style="min-width:15%">ES6</span>
-                                </li>
-                                <li>
-                                    <span class="experience-time">8 years</span><span class="tag" style="min-width:80%">Git</span>
-                                </li>
-                                <li>
-                                    <span class="experience-time">2 years</span><span class="tag" style="min-width:20%">Gulp</span>
-                                </li>
-                                <li>
-                                    <span class="experience-time overflows">10 years</span><span class="tag" style="min-width:100%">HTML</span>
-                                </li>
-                                <li>
-                                    <span class="experience-time overflows">10 years</span><span class="tag" style="min-width:100%">JavaScript</span>
-                                </li>
-                                <li>
-                                    <span class="experience-time">4 years</span><span class="tag" style="min-width:40%">Node</span>
-                                </li>
-                                <li>
-                                    <span class="experience-time">5 years</span><span class="tag" style="min-width:50%">Python</span>
-                                </li>
-                                <li>
-                                    <span class="experience-time">1 month</span><span class="tag" style="min-width:1%">React</span>
-                                </li>
-                                <li>
-                                    <span class="experience-time">1 year</span><span class="tag" style="min-width:10%">Redux</span>
-                                </li>
-                                <li>
-                                    <span class="experience-time">5 years</span><span class="tag" style="min-width:50%">SCSS</span>
-                                </li>
-                                <li>
-                                    <span class="experience-time">2 years</span><span class="tag" style="min-width:20%">Vue</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
             <div class="page-heading">
                 {{ i18n "alsoSee" }}
             </div>
