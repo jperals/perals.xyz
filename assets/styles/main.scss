@@ -1,4 +1,7 @@
+@import './avatar.scss';
 @import './button.scss';
+@import './fonts.scss';
+@import './layout.scss';
 @import './home.scss';
 @import './bar-graph.scss';
 
@@ -6,7 +9,11 @@ ul {
   padding: 0;
 }
 
-section.main .container .content {
+li {
+  list-style: none;
+}
+
+.main.container {
   .avatar {
     border-radius: 50%;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);

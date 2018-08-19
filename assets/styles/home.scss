@@ -1,84 +1,99 @@
-@import './colors.scss';
+@import './_colors.scss';
+@import './_breakpoints.scss';
 
-section.main.home .container {
-  .content {
-    padding-top: 6em;
-    padding-bottom: 6em;
-    .intro {
-      display: flex;
-      align-items: center;
-      .avatar {
-        background-color: rgb(234, 231, 242);
-        margin-right: 4em;
-        max-width: 138px;
-      }
-      .markdown blockquote {
-        border-left: 0 none;
-      }
-    }
-    .page-heading {
+.main.home {
+  padding-top: 6em;
+  padding-bottom: 6em;
+  .avatar {
+    background-color: rgb(234, 231, 242);
+    max-width: 138px;
+  }
+  .markdown blockquote {
+    border-left: 0 none;
+  }
+  section {
+    color: #666666;
+    font-size: 17px;
+    font-weight: normal;
+    padding-top: 3em;
+    &:not(:first-child) {
       border-top: 1px solid #CCCCCC;
-      color: #666666;
-      font-size: 17px;
-      font-weight: normal;
       margin-top: 3em;
-      padding-top: 3em;
     }
-    ul.inline li {
+  }
+  ul.inline li {
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 1em;
+    margin-bottom: .5em;
+    margin-right: 10%;
+    &.post-item {
+      width: 35%;
+    }
+    a,
+    a:link {
+      @extend .button;
+      color: rgba(0, 0, 0, .35);
       display: inline-block;
-      font-size: 16px;
-      margin-top: 1em;
-      margin-bottom: .5em;
-      margin-right: 10%;
-      &.post-item {
-        width: 35%;
+      transition: background-color 200ms, color 200ms;
+      &:hover {
+        color: rgba(0, 0, 0, .6);
       }
+    }
+    &:nth-child(6n+1) {
       a,
       a:link {
-        @extend .button;
-        color: rgba(0, 0, 0, .35);
-        display: inline-block;
-        transition: background-color 200ms, color 200ms;
-        &:hover {
-          color: rgba(0, 0, 0, .6);
-        }
+        background-color: light(nth($palette, 1))
       }
-      &:nth-child(6n+1) {
-        a,
-        a:link {
-          background-color: light(nth($palette, 1))
-        }
+    }
+    &:nth-child(6n+2) {
+      a,
+      a:link {
+        background-color: light(nth($palette, 2))
       }
-      &:nth-child(6n+2) {
-        a,
-        a:link {
-          background-color: light(nth($palette, 2))
-        }
+    }
+    &:nth-child(6n+3) {
+      a,
+      a:link {
+        background-color: light(nth($palette, 3))
       }
-      &:nth-child(6n+3) {
-        a,
-        a:link {
-          background-color: light(nth($palette, 3))
-        }
+    }
+    &:nth-child(6n+4) {
+      a,
+      a:link {
+        background-color: light(nth($palette, 4))
       }
-      &:nth-child(6n+4) {
-        a,
-        a:link {
-          background-color: light(nth($palette, 4))
-        }
+    }
+    &:nth-child(6n+5) {
+      a,
+      a:link {
+        background-color: light(nth($palette, 5))
       }
-      &:nth-child(6n+5) {
-        a,
-        a:link {
-          background-color: light(nth($palette, 5))
-        }
+    }
+    &:nth-child(6n) {
+      a,
+      a:link {
+        background-color: light(nth($palette, 6))
       }
-      &:nth-child(6n) {
-        a,
-        a:link {
-          background-color: light(nth($palette, 6))
-        }
-      }
+    }
+  }
+  .technologies .tag {
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: $breakpoint_wide - 1px) {
+  .intro {
+    text-align: center;
+  }
+}
+
+@media (min-width: $breakpoint_wide) {
+  .intro {
+    display: flex;
+    align-items: center;
+    .avatar {
+      margin-right: 3%;
     }
   }
 }

@@ -1,0 +1,15 @@
+@import './_breakpoints';
+
+.container {
+  margin: auto;
+}
+
+@media (min-width: $breakpoint_wide) {
+  .container {
+    max-width: 580px;
+  }
+}
+
+.tag {
+  display: inline-block;
+}
