@@ -1,0 +1,22 @@
+@mixin smallBorderTop($width) {
+  position: relative;
+  $color: rgb(255, 255, 255);
+  $color: darken($color, $width/2);
+  @debug $width;
+  @debug $color;
+  &:before {
+    $margin: calc((100% - #{$width})/2);
+    content: '';
+    display: block;
+    width: $width;
+    height: 1px;
+    background-color: $color !important;
+    position: absolute;
+    top: 0;
+    left: $margin;
+    right: $margin;
+  }
+  //border-width: 1px 0 0;
+  //border-style: solid;
+  //border-image: repeating-linear-gradient(to right, white, white 30%, $gray-light 30%, $gray-light 70%, white 70%, white 100%);
+}

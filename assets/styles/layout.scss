@@ -1,12 +1,24 @@
 @import './_breakpoints';
 
+body {
+  margin: 0;
+}
+
 .container {
   margin: auto;
 }
 
+@media (max-width: $breakpoint_wide - 1px) {
+  section {
+    padding: 2em;
+  }
+}
 @media (min-width: $breakpoint_wide) {
   .container {
     max-width: 580px;
+  }
+  .copy-text {
+    max-width: 80%;
   }
 }
 

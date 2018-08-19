@@ -1,0 +1,38 @@
+@import './_colors';
+@import './_small_border';
+
+.overview {
+  .overview-item {
+    h3 {
+      color: nth($grays, 2);
+      font-size: 22px;
+      font-weight: 100;
+      margin-bottom: .2em;
+    }
+    .lead {
+      color: nth($grays, 5);
+      margin-top: 0;
+    }
+    &:not(:first-child) {
+      @include smallBorderTop(25%);
+      padding-top: 40px;
+    }
+    padding-bottom: 40px;
+    .content {
+      color: nth($grays, 3);
+      line-height: 1.65em;
+    }
+    .technologies {
+      opacity: .75;
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+  }
+}
+
+@media (min-width: $breakpoint_wide) {
+  .technologies {
+    text-align: right;
+  }
+}
+

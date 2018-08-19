@@ -1,10 +1,10 @@
+@import '_colors';
 @import 'variables';
 
 .technologies {
   color: $gray-light;
-  padding-top: 1em;
   .tag, .experience-time {
-    font-size: 8.5pt;
+    font-size: 14px;
     color: #999 !important;
     padding: .3em .6em .35em .6em;
   }
@@ -15,9 +15,9 @@
     position: absolute;
   }
   .tag {
-    background-color: #E8E8E8 !important;
+    background-color: nth($grays, 7) !important;
     border-radius: 5px;
-    color: #888 !important;
+    color: nth($grays, 3) !important;
   }
   .technologies-stats {
     text-align: right;

@@ -1,4 +1,4 @@
-<div class="job">
+<div class="job overview-item">
     <div class="heading">
         <h3>
             {{ .Params.job_title }}
@@ -7,6 +7,11 @@
             {{ end}}
         </h3>
         <p class="lead">{{ .Params.location }}, {{ .Params.period }}</p>
+    </div>
+    <div class="row">
+        <div class="content copy-text">
+            {{ .Content }}
+        </div>
         <div class="technologies">
             <ul>
                 {{ range .Params.tags }}
@@ -15,11 +20,6 @@
                 </li>
                 {{ end }}
             </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="story">
-            {{ .Content }}
         </div>
     </div>
 </div>
