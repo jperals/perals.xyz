@@ -1,7 +1,6 @@
 baseURL = ""
 languageCode = "en-us"
 title = "Joan Perals"
-theme = "cocoa"
 
 [params]
 avatar = "img/profile-color-transparent-bg.png"
