@@ -1,6 +1,7 @@
 {{ partial "header.html" . }}
+{{ partial "nav.html" . }}
 <div class="container main home">
-    <section class="intro">
+    <section class="intro" id="intro">
         {{ if .Content }}
         {{ if .Site.Params.gravatar }}
         <img class="avatar" src="https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=50"
@@ -26,16 +27,16 @@
     <section>
         {{ partial "technologies.html" }}
     </section>
-    <section class="row">
+    <section class="row" id="professional-experience">
         {{ partial "jobs.html" . }}
     </section>
-    <section class="row">
+    <section class="row" id="academic-background">
         {{ partial "academic_background.html" }}
     </section>
     {{ $totalpostscount := len (where .Data.Pages "Section" "") }}
     {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
     {{ if gt $latestpostscount 0 }}
-    <section>
+    <section id="thoughts">
         <div class="page-heading">{{ i18n "someThoughtsAbout" }}</div>
         <ul class="inline">
             {{ range (first $latestpostscount ( where .Data.Pages.ByPublishDate.Reverse "Section" "" )) }}

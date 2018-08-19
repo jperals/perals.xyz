@@ -1,0 +1,75 @@
+@import './_breakpoints';
+@import './_colors';
+@import './_variables.scss';
+
+nav {
+  background-color: white;
+  border-bottom: 1px solid nth($grays, 6);
+  left: 0;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  .container {
+    align-items: center;
+    display: flex;
+  }
+  .pseudo-avatar {
+    background-color: rgb(204, 191, 232);
+    height: 1.25em;
+    opacity: .75;
+    padding: 0;
+    width: 1.25em;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  ul {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin: 0;
+    transition: opacity .5s;
+  }
+  li {
+    align-items: center;
+    display: flex;
+    a {
+      display: inline-block;
+      padding-bottom: .5em;
+      padding-top: .5em;
+      transition: color .3s;
+    }
+    a,
+    a:hover,
+    a:link,
+    a:visited {
+      color: nth($grays, 6);
+      &:hover,
+      &.active {
+        color: nth($grays, 2);
+      }
+      &.active {
+        border-bottom: 1px solid nth($grays, 2);
+        margin-bottom: -1px;
+      }
+    }
+  }
+  visibility: hidden;
+}
+
+@media (min-width: $breakpoint_wide) {
+  nav {
+    ul {
+      opacity: 0;
+    }
+    &:not(.hidden) {
+      visibility: visible;
+      ul {
+        opacity: 1;
+      }
+    }
+  }
+}
