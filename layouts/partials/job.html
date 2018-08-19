@@ -1,0 +1,25 @@
+<div class="job">
+    <div class="heading">
+        <h3>
+            {{ .Params.job_title }}
+            {{ if .Params.company }}
+            <span style="font-weight: 100">@</span> {{ .Params.company }}
+            {{ end}}
+        </h3>
+        <p class="lead">{{ .Params.location }}, {{ .Params.period }}</p>
+        <div class="technologies">
+            <ul>
+                {{ range .Params.tags }}
+                <li class="tag">
+                    {{ . }}
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="story">
+            {{ .Content }}
+        </div>
+    </div>
+</div>

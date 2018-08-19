@@ -23,22 +23,22 @@
         </div>
         {{ end }}
     </section>
-    {{ $totalpostscount := len (.Data.Pages) }}
-    {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
     <section>
         {{ partial "technologies.html" }}
     </section>
     <section class="row">
-        {{ partial "jobs" }}
+        {{ partial "jobs.html" . }}
     </section>
     <section class="row">
         {{ partial "academic_background.html" }}
     </section>
+    {{ $totalpostscount := len (where .Data.Pages "Section" "") }}
+    {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
     {{ if gt $latestpostscount 0 }}
     <section>
         <div class="page-heading">{{ i18n "someThoughtsAbout" }}</div>
         <ul class="inline">
-            {{ range (first $latestpostscount ( .Data.Pages.ByPublishDate.Reverse )) }}
+            {{ range (first $latestpostscount ( where .Data.Pages.ByPublishDate.Reverse "Section" "" )) }}
             {{ partial "li.html" . }}
             {{ end }}
             {{ if gt $totalpostscount $latestpostscount }}
