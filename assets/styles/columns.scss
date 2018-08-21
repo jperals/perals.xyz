@@ -1,0 +1,24 @@
+// Sort of replicate Bootstrap's column classes
+// Note that elements with these classes need to be wrapped in parents with `display: flex`.
+
+.col-xs-2 {
+  width: 16.66%;
+}
+.col-xs-3 {
+  width: 25%;
+}
+.col-xs-4 {
+  width: 33.33%;
+}
+.col-xs-6 {
+  width: 50%;
+}
+.col-xs-7 {
+  width: 58.33%;
+}
+.col-xs-10 {
+  width: 83.33%;
+}
+.col-xs-offset-2 {
+  margin-left: 16.66%;
+}

@@ -1,6 +1,7 @@
 @import './avatar.scss';
 @import './bar-graph.scss';
 @import './button.scss';
+@import './enrollments';
 @import './fonts.scss';
 @import './link';
 @import './layout.scss';
@@ -14,6 +15,12 @@ ul {
 
 li {
   list-style: none;
+}
+
+h3 {
+  color: nth($grays, 2);
+  font-size: 22px;
+  font-weight: 100;
 }
 
 .main.container {

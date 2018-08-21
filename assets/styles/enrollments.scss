@@ -1,0 +1,50 @@
+@import './_colors';
+@import './columns';
+
+.enrollments {
+  font-size: 85%;
+  li {
+    margin-bottom: 1.5em;
+    .row {
+      display: flex;
+      flex-direction: row;
+    }
+    .course-year,
+    .course-duration,
+    .course-author,
+    .course-author b {
+      color: nth($grays, 5) !important;
+    }
+    .course-year {
+      @extend .col-xs-2;
+      line-height: 20px;
+    }
+    .course-title {
+      @extend .col-xs-10;
+    }
+    .course-author {
+      em {
+        color: nth($grays, 3);
+        font-style: normal;
+      }
+    }
+    .course-details {
+      @extend .row;
+      .course-duration {
+        @extend .col-xs-offset-2;
+        @extend .col-xs-3;
+      }
+      .course-author {
+        @extend .col-xs-7;
+      }
+    }
+    .row.inline {
+      .course-title {
+        @extend .col-xs-4;
+      }
+      .course-author {
+        @extend .col-xs-6;
+      }
+    }
+  }
+}
