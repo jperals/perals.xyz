@@ -21,8 +21,12 @@
     }
     .technologies {
       opacity: .75;
-      padding-top: 1em;
-      padding-bottom: 1em;
+      padding-top: .85em;
+      padding-bottom: .85em;
+      .tag {
+        margin-top: .15em;
+        margin-bottom: .15em;
+      }
     }
   }
 }
