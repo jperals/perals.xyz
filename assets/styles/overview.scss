@@ -17,7 +17,16 @@
     padding-bottom: 40px;
     .content {
       color: nth($grays, 3);
-      line-height: 1.65em;
+      line-height: 1.5em;
+    }
+    .teaser-pic {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 50%;
+      width: 100%;
+      height: 0;
+      padding: 100% 0 0;
     }
     .technologies {
       opacity: .75;

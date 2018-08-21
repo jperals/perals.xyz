@@ -1,0 +1,37 @@
+<div class="project overview-item">
+    <div class="columns">
+        <div class="col-xs-6">
+            <div class="heading">
+                <a href="{{ .Permalink }}">
+                    <h3>
+                        {{ .Params.title }}
+                    </h3>
+                </a>
+                <p class="lead">{{ .Params.year }}</p>
+            </div>
+            <div class="content copy-text">
+                <p>
+                    {{ .Params.excerpt }}
+                </p>
+                <p>
+                    <a href="{{ .Permalink }}">Read more</a>
+                </p>
+            </div>
+        </div>
+        <div class="col-xs-4 col-xs-offset-2">
+            <a href="{{ .Permalink }}">
+                <div class="teaser-pic" {{ printf "style=\"background-image: url(%s)\"" .Params.image | safeHTMLAttr }}></div>
+            </a>
+        </div>
+    </div>
+    <div class="technologies">
+        <ul>
+            {{ range .Params.tags }}
+            <li class="tag">
+                {{ . }}
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+
+</div>

@@ -34,7 +34,7 @@
         {{ partial "academic_background.html" }}
     </section>
     <section id="projects">
-        {{ partial "projects.html" }}
+        {{ partial "projects.html" . }}
     </section>
     {{ $totalpostscount := len (where .Data.Pages "Section" "") }}
     {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
