@@ -6,18 +6,20 @@ let secondSection;
 
 window.addEventListener('DOMContentLoaded', function () {
   nav = document.querySelector('nav');
-  nav.querySelectorAll('a').forEach(link => {
-    let id = link.getAttribute('href');
-    if (id.startsWith('/')) {
-      id = id.slice(1);
-    }
-    if (id.startsWith('#')) {
-      id = id.slice(1);
-    }
-    if (id.length) {
-      linksBySectionId[id] = link;
-    }
-  });
+  if (nav) {
+    nav.querySelectorAll('a').forEach(link => {
+      let id = link.getAttribute('href');
+      if (id.startsWith('/')) {
+        id = id.slice(1);
+      }
+      if (id.startsWith('#')) {
+        id = id.slice(1);
+      }
+      if (id.length) {
+        linksBySectionId[id] = link;
+      }
+    });
+  }
   secondSection = document.querySelector('section:nth-child(2)');
 });
 
