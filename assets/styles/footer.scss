@@ -1,0 +1,17 @@
+@import './_colors';
+
+body {
+  background-color: nth($grays, 8);
+}
+
+.wrapper.main {
+  background-color: white;
+}
+
+footer {
+  border-top: 1px solid nth($grays, 7);
+  h1 {
+    font-size: 16px;
+    font-weight: normal;
+  }
+}

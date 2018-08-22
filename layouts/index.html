@@ -1,76 +1,78 @@
 {{ partial "header.html" . }}
 {{ partial "nav.html" . }}
-<div class="container main home">
-    <section class="intro" id="intro">
-        {{ if .Content }}
-        {{ if .Site.Params.gravatar }}
-        <img class="avatar" src="https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=50"
-             rcset="https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=100 2x, https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=150 3x, https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=200 4x">
-        {{ else if .Site.Params.avatar }}
-        {{ $.Scratch.Add "srcset" (slice (printf "%s 1x" (.Site.Params.avatar|absURL))) }}
-        {{ $directory := replaceRE "^(.*)/[^/]+$" "$1" .Site.Params.avatar }}
-        {{ $basename := replaceRE "^.*/([^./]+).*$" "$1" .Site.Params.avatar }}
-        {{ $extension := replaceRE "^.*/[^.]+\\.([^.]+)$" "$1" .Site.Params.avatar }}
-        {{ range (readDir (printf "static/%s" $directory)) }}
-        {{ if findRE (printf "^%s-\\d+x\\.%s$" $basename $extension) .Name }}
-        {{ $.Scratch.Add "srcset" (slice (replaceRE (printf "^(%s)-(\\d+x)\\.(%s)$" $basename $extension) (printf "%s/$1-$2.$3 $2" ($directory|absURL)) .Name)) }}
-        {{ end }}
-        {{ end }}
-        {{ $srcset := delimit ($.Scratch.Get "srcset") "," }}
-        <img class="avatar" src="/{{ .Site.Params.avatar }}" {{ printf "srcset=%q" $srcset | safeHTMLAttr }}>
-        {{ end }}
-        <div class="markdown">
-            {{ .Content }}
-        </div>
-        {{ end }}
-    </section>
-    <section>
-        {{ partial "technologies.html" }}
-    </section>
-    <section class="row" id="professional-experience">
-        {{ partial "jobs.html" . }}
-    </section>
-    <section class="row" id="academic-background">
-        {{ partial "academic_background.html" }}
-    </section>
-    <section id="projects">
-        {{ partial "projects.html" . }}
-    </section>
-    {{ $totalpostscount := len (where .Data.Pages "Section" "") }}
-    {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
-    {{ if gt $latestpostscount 0 }}
-    <section id="thoughts">
-        <div class="page-heading">{{ i18n "someThoughtsAbout" }}</div>
-        <ul class="inline">
-            {{ range (first $latestpostscount ( where .Data.Pages.ByPublishDate.Reverse "Section" "" )) }}
-            {{ partial "li.html" . }}
-            {{ end }}
-            {{ if gt $totalpostscount $latestpostscount }}
-            {{ range where .Site.Menus.main "Identifier" "blog" }}
-            <li class="post-item no-bullet">
-                <a id="see-more" {{ printf "href=%q " .URL | safeHTMLAttr }}><span>See more&hellip;</span></a>
-            </li>
+<div class="wrapper main">
+    <div class="container main home">
+        <section class="intro" id="intro">
+            {{ if .Content }}
+            {{ if .Site.Params.gravatar }}
+            <img class="avatar" src="https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=50"
+                 rcset="https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=100 2x, https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=150 3x, https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=200 4x">
+            {{ else if .Site.Params.avatar }}
+            {{ $.Scratch.Add "srcset" (slice (printf "%s 1x" (.Site.Params.avatar|absURL))) }}
+            {{ $directory := replaceRE "^(.*)/[^/]+$" "$1" .Site.Params.avatar }}
+            {{ $basename := replaceRE "^.*/([^./]+).*$" "$1" .Site.Params.avatar }}
+            {{ $extension := replaceRE "^.*/[^.]+\\.([^.]+)$" "$1" .Site.Params.avatar }}
+            {{ range (readDir (printf "static/%s" $directory)) }}
+            {{ if findRE (printf "^%s-\\d+x\\.%s$" $basename $extension) .Name }}
+            {{ $.Scratch.Add "srcset" (slice (replaceRE (printf "^(%s)-(\\d+x)\\.(%s)$" $basename $extension) (printf "%s/$1-$2.$3 $2" ($directory|absURL)) .Name)) }}
             {{ end }}
             {{ end }}
-        </ul>
-    </section>
-    {{ end }}
-    <section>
-        <div class="page-heading">
-            {{ i18n "alsoSee" }}
-        </div>
-        <ul class="inline">
-            <li>
-                {{ if .Site.Params.projects_url }}
-                <a {{ printf "href=%q" .Site.Params.projects_url | safeHTMLAttr }}>{{ i18n "someProjects" }}</a>
+            {{ $srcset := delimit ($.Scratch.Get "srcset") "," }}
+            <img class="avatar" src="/{{ .Site.Params.avatar }}" {{ printf "srcset=%q" $srcset | safeHTMLAttr }}>
+            {{ end }}
+            <div class="markdown">
+                {{ .Content }}
+            </div>
+            {{ end }}
+        </section>
+        <section>
+            {{ partial "technologies.html" }}
+        </section>
+        <section class="row" id="professional-experience">
+            {{ partial "jobs.html" . }}
+        </section>
+        <section class="row" id="academic-background">
+            {{ partial "academic_background.html" }}
+        </section>
+        <section id="projects">
+            {{ partial "projects.html" . }}
+        </section>
+        {{ $totalpostscount := len (where .Data.Pages "Section" "") }}
+        {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
+        {{ if gt $latestpostscount 0 }}
+        <section id="thoughts">
+            <div class="page-heading">{{ i18n "someThoughtsAbout" }}</div>
+            <ul class="inline">
+                {{ range (first $latestpostscount ( where .Data.Pages.ByPublishDate.Reverse "Section" "" )) }}
+                {{ partial "li.html" . }}
                 {{ end }}
-            </li>
-            <li>
-                {{ if .Site.Params.linkedin_url }}
-                <a {{ printf "href=%q" .Site.Params.linkedin_url | safeHTMLAttr }}>LinkedIn</a>
+                {{ if gt $totalpostscount $latestpostscount }}
+                {{ range where .Site.Menus.main "Identifier" "blog" }}
+                <li class="post-item no-bullet">
+                    <a id="see-more" {{ printf "href=%q " .URL | safeHTMLAttr }}><span>See more&hellip;</span></a>
+                </li>
                 {{ end }}
-            </li>
-        </ul>
-    </section>
+                {{ end }}
+            </ul>
+        </section>
+        {{ end }}
+        <section>
+            <div class="page-heading">
+                {{ i18n "alsoSee" }}
+            </div>
+            <ul class="inline">
+                <li>
+                    {{ if .Site.Params.projects_url }}
+                    <a {{ printf "href=%q" .Site.Params.projects_url | safeHTMLAttr }}>{{ i18n "someProjects" }}</a>
+                    {{ end }}
+                </li>
+                <li>
+                    {{ if .Site.Params.linkedin_url }}
+                    <a {{ printf "href=%q" .Site.Params.linkedin_url | safeHTMLAttr }}>LinkedIn</a>
+                    {{ end }}
+                </li>
+            </ul>
+        </section>
+    </div>
 </div>
 {{ partial "footer.html" . }}
