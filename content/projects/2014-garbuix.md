@@ -2,7 +2,7 @@
 title: Garbuix
 excerpt: Using Processing to explore visual patterns in 2D particle systems
 draft: false
-image: img/garbuix-02.png
+image: img/garbuix-00.png
 link: https://github.com/jperals/garbuix
 tags: [ Java, Processing ]
 year: 2014
