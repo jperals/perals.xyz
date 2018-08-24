@@ -1,7 +1,7 @@
 ---
 title: "Human-Friendly Coding"
 date: 2018-07-20T10:44:39+02:00
-draft: false
+draft: true
 ---
 
 If you write code, it's important to remember that it is going to be read not just by computers but also by humans. If you just wrote something that _works_ in the sense that it runs as expected, but is not nice to read and not clear how to use and extend, it's _not_ ready.

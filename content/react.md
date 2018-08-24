@@ -1,7 +1,7 @@
 ---
 title: "React"
 date: 2018-07-20T10:59:18+02:00
-draft: false
+draft: true
 ---
 
 Coming from Angular, [React](https://reactjs.org/)'s syntax where everything is wrapped in JavaScript never seemed very attractive to me. But its big advantage is its huge tool ecosystem around.

@@ -1,7 +1,7 @@
 ---
 title: "Don't Send Files"
 date: 2018-07-20T10:27:00+02:00
-draft: false
+draft: true
 ---
 
 You send out the file with the texts to be translated. In the meantime, you develop new features, so you generate a new version of the translation file with more texts. But the old one is already being translated, and not in your power... Who merges the two files, when, and how?
