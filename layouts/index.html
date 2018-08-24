@@ -56,23 +56,6 @@
             </ul>
         </section>
         {{ end }}
-        <section>
-            <div class="page-heading">
-                {{ i18n "alsoSee" }}
-            </div>
-            <ul class="inline">
-                <li>
-                    {{ if .Site.Params.projects_url }}
-                    <a {{ printf "href=%q" .Site.Params.projects_url | safeHTMLAttr }}>{{ i18n "someProjects" }}</a>
-                    {{ end }}
-                </li>
-                <li>
-                    {{ if .Site.Params.linkedin_url }}
-                    <a {{ printf "href=%q" .Site.Params.linkedin_url | safeHTMLAttr }}>LinkedIn</a>
-                    {{ end }}
-                </li>
-            </ul>
-        </section>
     </div>
 </div>
 {{ partial "footer.html" . }}
