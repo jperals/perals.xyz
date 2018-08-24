@@ -1,5 +1,6 @@
+@import './_animation';
 @import './_breakpoints';
-@import './_colors';
+@import './_palette';
 @import './_variables.scss';
 
 nav {
@@ -20,6 +21,7 @@ nav {
     height: 1.25em;
     opacity: .75;
     padding: 0;
+    transition: transform $transition_duration_short;
     width: 1.25em;
     &:hover {
       opacity: 1;
@@ -58,6 +60,9 @@ nav {
     }
   }
   visibility: hidden;
+  .pseudo-avatar:hover {
+    transform: scale(1.1);
+  }
 }
 
 @media (min-width: $breakpoint_wide) {

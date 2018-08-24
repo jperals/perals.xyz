@@ -14,10 +14,8 @@
     color: nth($grays, 3);
     font-size: 17px;
     font-weight: normal;
-    padding-top: 3em;
     &:not(:first-child) {
       border-top: 1px solid nth($grays, 5);
-      margin-top: 3em;
     }
   }
   ul.inline li {

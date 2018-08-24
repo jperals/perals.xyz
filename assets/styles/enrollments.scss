@@ -30,6 +30,7 @@
     }
     .course-details {
       @extend .row;
+      margin: .4em 0 2.5em 0;
       .course-duration {
         @extend .col-xs-offset-2;
         @extend .col-xs-3;

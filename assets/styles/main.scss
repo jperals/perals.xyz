@@ -4,12 +4,15 @@
 @import './enrollments';
 @import './fonts.scss';
 @import './footer.scss';
+@import './intro';
 @import './link';
 @import './layout.scss';
 @import './home.scss';
 @import './nav.scss';
 @import './overview.scss';
 @import './single.scss';
+@import './_small_border.scss';
+@import './type.scss';
 
 ul {
   padding: 0;
@@ -20,9 +23,7 @@ li {
 }
 
 h3 {
-  color: nth($grays, 2);
   font-size: 22px;
-  font-weight: 100;
 }
 
 img {
@@ -63,12 +64,4 @@ img {
 .right {
   text-align: right;
   width: 100%;
-}
-
-.overview-item {
-  a:hover h3 {
-    border-bottom: 1px solid nth($grays, 2);
-    display: inline-block;
-    margin-bottom: calc(.2em - 1px);
-  }
 }
