@@ -1,37 +1,34 @@
-<div class="project overview-item">
+<div class="project overview-item circle-clip-effect">
     <a href="{{ .Permalink }}">
         <div class="teaser-pic" {{ printf "style=\"background-image: url(%s)\"" .Params.image | safeHTMLAttr }}></div>
-    </a>
-    <div class="columns">
-        <div class="col-xs-6">
-            <div class="heading">
-                <a href="{{ .Permalink }}">
+        <div class="columns">
+            <div class="col-xs-6">
+                <div class="heading">
                     <h3>
                         {{ .Params.title }}
                     </h3>
-                </a>
-                <p class="lead">{{ .Params.year }}</p>
+                    <p class="lead">{{ .Params.year }}</p>
+                </div>
+                <div class="content copy-text">
+                    <p class="excerpt">
+                        {{ .Params.excerpt }}
+                    </p>
+                    <p>
+                        Read more
+                    </p>
+                </div>
             </div>
-            <div class="content copy-text">
-                <p class="excerpt">
-                    {{ .Params.excerpt }}
-                </p>
-                <p>
-                    <a href="{{ .Permalink }}" class="more-link">Read more</a>
-                </p>
+            <div class="col-xs-4 col-xs-offset-2">
             </div>
         </div>
-        <div class="col-xs-4 col-xs-offset-2">
+        <div class="tags">
+            <ul>
+                {{ range .Params.tags }}
+                <li class="tag">
+                    {{ . }}
+                </li>
+                {{ end }}
+            </ul>
         </div>
-    </div>
-    <div class="tags">
-        <ul>
-            {{ range .Params.tags }}
-            <li class="tag">
-                {{ . }}
-            </li>
-            {{ end }}
-        </ul>
-    </div>
-
+    </a>
 </div>
