@@ -21,10 +21,11 @@ nav {
     height: 1.25em;
     opacity: .75;
     padding: 0;
-    transition: transform $transition_duration_short;
+    transition: color $transition_duration_short, transform $transition_duration_short;
     width: 1.25em;
     &:hover {
       opacity: 1;
+      transform: scale(1.1);
     }
   }
   ul {
@@ -60,9 +61,6 @@ nav {
     }
   }
   visibility: hidden;
-  .pseudo-avatar:hover {
-    transform: scale(1.1);
-  }
 }
 
 @media (min-width: $breakpoint_wide) {

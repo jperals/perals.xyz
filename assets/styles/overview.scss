@@ -59,8 +59,7 @@
   }
   .heading h3,
   .heading .lead,
-  .excerpt,
-  .more-link {
+  .content {
     transition: color $duration;
   }
   .teaser-pic {
@@ -78,15 +77,16 @@
     }
     .heading h3,
     .heading .lead,
-    .excerpt,
-    .more-link {
+    .content {
       color: white !important;
     }
     // Add some shadow to the texts to make them more legible
     .columns {
       text-shadow: 0 0 5px rgba(0, 0, 0, .6);
     }
-    a:hover {
+    a:hover,
+    a:link:hover,
+    a:visited:hover {
       border-bottom-color: white !important;
     }
   }
