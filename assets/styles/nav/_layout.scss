@@ -44,8 +44,10 @@ nav {
     a:link,
     a:visited {
       &.active {
-        border-bottom-width: 1px;
-        border-bottom-style: solid;            margin-bottom: -1px;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        margin-bottom: -1px;
+        margin-top: 1px;
       }
     }
   }
