@@ -4,28 +4,38 @@
 
 <div class="overview">
 
-    <ul class="overview-item social-media-list">
+    <ul class="social-media-list">
 
         <li>
-            <a href="mailto:jperals@protonmail.com">
+            <span class="sm-name">E-mail</span>
+            <div class="sm-link">
                 <i class="far fa-envelope-open"></i>
-                <span class="username">jperals@protonmail.com</span>
-            </a>
+                <a href="mailto:jperals@protonmail.com" class="username">
+                    jperals@protonmail.com
+                </a>
+            </div>
         </li>
 
         {{ if .Site.Params.linkedin_url }}
         <li>
-            <a {{ printf "href=%q" .Site.Params.linkedin_url | safeHTMLAttr }}>
-            <i class="fab fa-linkedin-in"></i>
-            <span class="username">joanperalstresserra</span></a>
-
+            <span class="sm-name">Linkedin</span>
+            <div class="sm-link">
+                <i class="fab fa-linkedin-in"></i>
+                <a {{ printf "href=%q" .Site.Params.linkedin_url | safeHTMLAttr }} class="username">
+                    joanperalstresserra
+                </a>
+            </div>
         </li>
         {{ end }}
 
         <li>
-            <a href="https://github.com/jperals">
+            <span class="sm-name">Github</span>
+            <div class="sm-link">
                 <i class="fab fa-github"></i>
-                <span class="username">jperals</span></a>
+                <a href="https://github.com/jperals" class="username">
+                jperals
+                </a>
+            </div>
         </li>
 
     </ul>

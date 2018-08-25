@@ -1,0 +1,11 @@
+@import '../palette';
+
+a:hover,
+a:link,
+a:visited {
+  color: inherit;
+  border-bottom-color: nth($grays, 5);
+  &:hover {
+    border-bottom-color: nth($grays, 2);
+  }
+}

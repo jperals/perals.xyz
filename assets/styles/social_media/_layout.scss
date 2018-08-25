@@ -1,7 +1,24 @@
+@import '../columns';
+
 .social-media-list {
+  margin-top: 0;
+  padding-top: 3.5em;
   li {
-    margin-bottom: 1em;
-    &:hover .username {
+    margin-bottom: 3em;
+    @extend .columns;
+    &:not(:first-child) {
+      margin-top: 1.5em;
+    }
+  }
+  .sm-name {
+    @extend .col-xs-5;
+    padding-right: 2em;
+    text-align: right;
+  }
+  .username {
+    @extend .col-xs-7;
+    border-bottom: 0 none;
+    &:hover {
       text-decoration: underline;
     }
   }

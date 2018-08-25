@@ -1,0 +1,5 @@
+@import '../small_border';
+
+.social-media-list {
+  @include smallBorderTop(25%);
+}

@@ -1,0 +1,10 @@
+@import '../palette';
+
+.social-media-list {
+  .sm-name {
+    color: nth($grays, 4);
+  }
+  .sm-link i {
+    color: nth($grays, 3);
+  }
+}
