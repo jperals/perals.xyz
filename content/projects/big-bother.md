@@ -2,7 +2,7 @@
 title: Big Bother
 year: 2014
 draft: false
-image: img/big-bother.png
+image: img/big-bother-crop-658x407.png
 link: https://player.vimeo.com/video/100365334#t=31m09s
 tags: [ Java, Processing ]
 excerpt: An interactive installation

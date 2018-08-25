@@ -2,7 +2,7 @@
 title: Doodlescript
 year: 2016
 draft: false
-image: img/use-case-2.png
+image: img/doodlescript.png
 link: https://github.com/turink/app
 tags: [ Android, Angular, IoT ]
 excerpt: How would computer programming look like if we could reinvent it now from the ground up?

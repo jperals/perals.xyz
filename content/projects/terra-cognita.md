@@ -2,7 +2,7 @@
 title: Terra Cognita
 year: 2012 — 2013
 draft: false
-image: img/terra-cognita.png
+image: img/terra-cognita-crop-641x553.png
 link: https://github.com/jperals/terra-cognita
 tags: [ C++, OpenFrameworks ]
 excerpt: A visualization of my experience of the city
