@@ -22,11 +22,11 @@
     .course-title {
       @extend .col-xs-10;
     }
-    .course-author {
-      em {
-        color: nth($grays, 3);
-        font-style: normal;
-      }
+    .course-author em {
+      font-style: normal;
+    }
+    .row.inline .course-author em {
+      color: nth($grays, 3);
     }
     .course-details {
       @extend .row;

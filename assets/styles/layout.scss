@@ -35,7 +35,12 @@ section > .graph {
 
 @media (max-width: $breakpoint_wide - 1px) {
   section {
-    padding: 2em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+  }
+  .container {
+    padding-left: 2em;
+    padding-right: 2em;
   }
 }
 @media (min-width: $breakpoint_wide) {
