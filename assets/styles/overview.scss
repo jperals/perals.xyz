@@ -1,4 +1,5 @@
-@import './_colors';
+@import './_animation';
+@import './_palette';
 @import './_small_border';
 
 .overview {
@@ -22,15 +23,19 @@
         font-style: normal;
       }
     }
-    .teaser-pic {
-      background-color: mediumpurple;
+    .clip-effect {
+      clip-path: circle(13% at 83% 27%);
       position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
       top: 0;
-      right: 0;
+      background: linear-gradient(240deg, rgb(160, 200, 210), rgb(103, 103, 103) 80%);
+    }
+    .teaser-pic {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      clip-path: circle(13% at 83% 27%);
       width: 100%;
       height: 100%;
     }
@@ -52,7 +57,7 @@
 // Teaser picture circle clip animation effect on hover
 
 .overview .overview-item.circle-clip-effect {
-  $duration: 400ms;
+  $duration: $transition_duration_long;
   .columns,
   .tags {
     transition: transform $duration, text-shadow $duration;
@@ -62,18 +67,15 @@
   .content {
     transition: color $duration;
   }
-  .teaser-pic {
+  .clip-effect {
     transition: clip-path $duration;
   }
   &:hover {
-    .teaser-pic {
+    .clip-effect {
       clip-path: circle(100% at 50% 50%);
     }
     .columns {
       transform: translateX(20px);
-    }
-    .tags {
-      transform: translateX(-20px);
     }
     .heading h3,
     .heading .lead,
@@ -89,6 +91,18 @@
     a:visited:hover {
       border-bottom-color: white !important;
     }
+  }
+}
+
+@media (max-width: $breakpoint_wide - 1px) {
+  .overview .overview-item.circle-clip-effect:hover .tags {
+    transform: translateX(20px);
+  }
+}
+
+@media (min-width: $breakpoint_wide) {
+  .overview .overview-item.circle-clip-effect:hover .tags {
+    transform: translateX(-20px);
   }
 }
 
