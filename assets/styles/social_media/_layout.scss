@@ -1,0 +1,8 @@
+.social-media-list {
+  li {
+    margin-bottom: 1em;
+    &:hover .username {
+      text-decoration: underline;
+    }
+  }
+}

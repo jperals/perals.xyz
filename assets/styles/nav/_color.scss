@@ -1,0 +1,24 @@
+@import '../_palette';
+
+nav {
+  background-color: white;
+  border-bottom-color: nth($grays, 6);
+  .pseudo-avatar {
+    background-color: rgb(204, 191, 232);
+  }
+  li {
+    a,
+    a:hover,
+    a:link,
+    a:visited {
+      color: nth($grays, 6);
+      &:hover,
+      &.active {
+        color: nth($grays, 2);
+      }
+      &.active {
+        border-bottom-color: nth($grays, 2);
+      }
+    }
+  }
+}

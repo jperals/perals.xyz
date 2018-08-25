@@ -1,13 +1,10 @@
-@import './_animation';
-@import './_breakpoints';
-@import './_palette';
-@import './_variables.scss';
+@import '../_breakpoints';
+@import '../_palette';
 
 nav {
-  background-color: white;
-  border-bottom: 1px solid nth($grays, 6);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
   left: 0;
-  font-size: 14px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -17,11 +14,9 @@ nav {
     display: flex;
   }
   .pseudo-avatar {
-    background-color: rgb(204, 191, 232);
     height: 1.25em;
     opacity: .75;
     padding: 0;
-    transition: color $transition_duration_short, transform $transition_duration_short;
     width: 1.25em;
     &:hover {
       opacity: 1;
@@ -43,20 +38,14 @@ nav {
       display: inline-block;
       padding-bottom: .5em;
       padding-top: .5em;
-      transition: color .3s;
     }
     a,
     a:hover,
     a:link,
     a:visited {
-      color: nth($grays, 6);
-      &:hover,
       &.active {
-        color: nth($grays, 2);
-      }
-      &.active {
-        border-bottom: 1px solid nth($grays, 2);
-        margin-bottom: -1px;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;            margin-bottom: -1px;
       }
     }
   }

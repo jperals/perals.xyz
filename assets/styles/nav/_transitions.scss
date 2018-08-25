@@ -1,0 +1,17 @@
+@import '../_animation';
+
+nav {
+  .pseudo-avatar {
+    transition: color $transition_duration_short, transform $transition_duration_short;
+    &:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+  li a {
+    display: inline-block;
+    padding-bottom: .5em;
+    padding-top: .5em;
+    transition: color .3s;
+  }
+}
