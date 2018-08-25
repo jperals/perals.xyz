@@ -1,0 +1,33 @@
+<h2>
+    Contact
+</h2>
+
+<div class="overview">
+
+    <ul class="overview-item social-media-list">
+
+        <li>
+            <a href="mailto:jperals@protonmail.com">
+                <i class="far fa-envelope-open"></i>
+                <span class="username">jperals@protonmail.com</span>
+            </a>
+        </li>
+
+        {{ if .Site.Params.linkedin_url }}
+        <li>
+            <a {{ printf "href=%q" .Site.Params.linkedin_url | safeHTMLAttr }}>
+            <i class="fab fa-linkedin-in"></i>
+            <span class="username">joanperalstresserra</span></a>
+
+        </li>
+        {{ end }}
+
+        <li>
+            <a href="https://github.com/jperals">
+                <i class="fab fa-github"></i>
+                <span class="username">jperals</span></a>
+        </li>
+
+    </ul>
+
+</div>
