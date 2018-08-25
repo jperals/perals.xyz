@@ -1,4 +1,4 @@
-@import './_colors';
+@import './_palette';
 
 body {
   background-color: nth($grays, 8);
@@ -10,8 +10,22 @@ body {
 
 footer {
   border-top: 1px solid nth($grays, 7);
+  padding-top: 1em;
+  padding-bottom: 1em;
   h1 {
-    font-size: 16px;
     font-weight: normal;
+  }
+  i {
+    width: 20px;
+  }
+  ul {
+    color: nth($grays, 7);
+  }
+  li {
+    font-size: 14px;
+    margin-bottom: 1em;
+    &:hover .username {
+      text-decoration: underline;
+    }
   }
 }
