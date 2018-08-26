@@ -1,14 +1,15 @@
 @import './_breakpoints.scss';
-@import './_colors';
+@import './_palette';
+@import './_small_border';
 
 section.intro {
   padding-bottom: 5em;
-  padding-top: 3em;
+  padding-top: 4em;
 }
 
 .section-intro-text {
-  border-top: 1px solid nth($grays, 5);
-  border-bottom: 1px solid nth($grays, 5);
+  @include smallBorderTop(25%);
+  @include smallBorderBottom(100%);
   padding-bottom: 3em;
   text-align: center;
 }

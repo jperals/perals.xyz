@@ -33,6 +33,11 @@ section > .graph {
   padding: 4em 0;
 }
 
+.use-case-image {
+  margin-top: 7.5em;
+  margin-bottom: 1.5em;
+}
+
 @media (max-width: $breakpoint_wide - 1px) {
   section {
     padding-bottom: 2em;
@@ -48,7 +53,14 @@ section > .graph {
     max-width: $container-width-wide;
   }
   .copy-text {
-    max-width: 75%;
+    ol,
+    ul,
+    p {
+      max-width: 70%;
+      & > img {
+        margin-left: 20%;
+      }
+    }
   }
 }
 

@@ -1,3 +1,6 @@
 .main.single {
-  padding: 2em 0 6em;
+  padding: 0 0 4em;
+  .content + * {
+    margin-top: 3em;
+  }
 }
