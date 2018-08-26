@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 <div class="wrapper main">
-    <section class="main single">
+    <section class="main single" id="projects">
         <div class="container main">
             <div class="content">
                 {{ partial "page-heading.html" . }}
@@ -8,16 +8,13 @@
                     {{ .Content }}
                 </div>
             </div>
+            <div class="right">
+                <a class="button back-button subtle-button" {{ printf "href=%q" ("/#projects" | relLangURL) | safeHTMLAttr }}>
+                Back
+                </a>
+            </div>
         </div>
     </section>
-    <div class="fixed bottom">
-        <section>
-            <div class="container">
-                <div class="right">
-                    <a class="button back-button subtle-button" {{ printf "href=%q" ("/" | relLangURL) | safeHTMLAttr }}></a>
-                </div>
-            </div>
-        </section>
-    </div>
 </div>
+{{ partial "nav.html" . }}
 {{ partial "footer.html" . }}
