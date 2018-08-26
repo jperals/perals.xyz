@@ -20,3 +20,23 @@
   //border-style: solid;
   //border-image: repeating-linear-gradient(to right, white, white 30%, $gray-light 30%, $gray-light 70%, white 70%, white 100%);
 }
+
+@mixin smallBorderBottom($width) {
+  position: relative;
+  $color: rgb(255, 255, 255);
+  $color: darken($color, 25%);
+  @debug $width;
+  @debug $color;
+  &:after {
+    $margin: calc((100% - #{$width})/2);
+    content: '';
+    display: block;
+    width: $width;
+    height: 1px;
+    background-color: $color !important;
+    position: absolute;
+    bottom: 0;
+    left: $margin;
+    right: $margin;
+  }
+}
