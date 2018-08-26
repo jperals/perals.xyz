@@ -1,19 +1,23 @@
+@import './animation';
+@import './palette';
+
 .button {
+  border: 0 none;
   border-radius: 4px;
   padding: .6em;
-  transition: color 200ms, background-color 200ms;
-  &:hover {
-    text-decoration: underline;
-  }
+  transition: color $transition_duration_normal, background-color $transition_duration_normal;
 }
 
 .subtle-button,
-.subtle-button:link {
+.subtle-button:link,
+a.button.subtle-button,
+a.button.subtle-button:link {
   @extend .button;
-  color: lightgray;
+  background-color: rgb(240, 240, 240);
+  color: nth($grays, 3);
   &:hover {
-    background-color: rgb(240, 240, 240);
-    color: gray;
+    background-color: rgb(220, 220, 220);
+    color: nth($grays, 2);
   }
   &.back-button {
     padding: .3em .6em .3em 0;
