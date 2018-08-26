@@ -63,13 +63,25 @@
   .tags {
     transition: transform $duration, text-shadow $duration;
   }
-  .heading h3,
   .heading .lead,
   .content {
     transition: color $duration;
   }
+  .heading h3,
+  .read-more-link {
+    border-bottom-color: transparent;
+    transition: color $duration, border-bottom-color $duration;
+  }
   .clip-effect {
     transition: -webkit-clip-path $duration, clip-path $duration;
+  }
+  .read-more-link {
+    display: inline-block;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    &:after {
+      transition: opacity $duration;
+    }
   }
   &:hover {
     .clip-effect {
@@ -86,12 +98,14 @@
     }
     // Add some shadow to the texts to make them more legible
     .columns {
-      text-shadow: 0 0 5px rgba(0, 0, 0, .6);
+      text-shadow: 0 0 8px rgba(0, 0, 0, .8);
     }
-    a:hover,
-    a:link:hover,
-    a:visited:hover {
-      border-bottom-color: white !important;
+    h3,
+    .read-more-link {
+      border-bottom-color: white;
+    }
+    .read-more-link:after {
+      opacity: 1;
     }
   }
 }
