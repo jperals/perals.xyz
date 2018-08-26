@@ -12,18 +12,11 @@
 @import './home.scss';
 @import './nav/nav';
 @import './overview.scss';
+@import './resets';
 @import './single.scss';
 @import './social_media/social_media';
 @import './_small_border.scss';
 @import './type.scss';
-
-ul {
-  padding: 0;
-}
-
-img {
-  max-width: 100%;
-}
 
 .main.container {
   .avatar {
