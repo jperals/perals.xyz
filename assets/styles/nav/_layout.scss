@@ -2,6 +2,7 @@
 @import '../_palette';
 
 nav {
+  $link_padding: .8em;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   left: 0;
@@ -14,10 +15,10 @@ nav {
     display: flex;
   }
   .pseudo-avatar {
-    height: 1.25em;
+    height: 1em;
     opacity: .75;
     padding: 0;
-    width: 1.25em;
+    width: 1em;
     &:hover {
       opacity: 1;
       transform: scale(1.1);
@@ -36,8 +37,8 @@ nav {
     display: flex;
     a {
       display: inline-block;
-      padding-bottom: .5em;
-      padding-top: .5em;
+      padding-bottom: $link_padding;
+      padding-top: $link_padding;
     }
     a,
     a:hover,
@@ -46,8 +47,8 @@ nav {
       &.active {
         border-bottom-width: 2px;
         border-bottom-style: solid;
-        margin-bottom: -1px;
-        margin-top: 1px;
+        margin-bottom: - 1px;
+        padding-bottom: calc(#{$link_padding} - 1px);
       }
     }
   }
