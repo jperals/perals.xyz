@@ -1,0 +1,9 @@
+.content li {
+  margin-left: 1em;
+  &:before {
+    content: '- ';
+    display: inline-block;
+    margin-left: -1em;
+    width: 1em;
+  }
+}
