@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Openoffice.org Basic on Joan Perals</title>
+    <link>/tags/openoffice.org-basic/</link>
+    <description>Recent content in Openoffice.org Basic on Joan Perals</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/tags/openoffice.org-basic/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/jobs/2009-2010-abaden/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jobs/2009-2010-abaden/</guid>
+      <description>I developed various web-based and desktop applications for a dental clinic team to improve their workflows in their daily tasks.</description>
+    </item>
+    
+  </channel>
+</rss>

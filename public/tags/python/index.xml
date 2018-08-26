@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Joan Perals</title>
+    <link>/tags/python/</link>
+    <description>Recent content in Python on Joan Perals</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/jobs/2010-2012-cm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jobs/2010-2012-cm/</guid>
+      <description>One of my main tasks at Content Mind was to take care of the visual layer of a Plone-based health information portal.
+The most fun part was the development of complex and visually rich web apps such as a quiz game and a nutrition tracking app.</description>
+    </item>
+    
+  </channel>
+</rss>

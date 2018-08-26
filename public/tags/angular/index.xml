@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angular on Joan Perals</title>
+    <link>/tags/angular/</link>
+    <description>Recent content in Angular on Joan Perals</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/jobs/2012-ixds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jobs/2012-ixds/</guid>
+      <description>At IXDS I have the opportunity to contribute to top emerging design projects by helping make UX concepts tangible.
+One of the most interesting aspects of my work at IXDS is the close relationship between design and engineering —and one of ist most challenging aspects is the need to work in quick iterations while allowing for mid-term development at the same time.
+Indeed, an often overlooked aspect of such discipline is how important good coding patterns are in order for the code base to be flexible for unexpected requirement changes.</description>
+    </item>
+    
+    <item>
+      <title>Doodlescript</title>
+      <link>/projects/doodlescript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/doodlescript/</guid>
+      <description>How would computer programming look like if we could reinvent it now from the ground up?
+With this project I wanted to radically question the way we program. Why do we type code at all? Maybe we could just use visual symbols. And then maybe we could even write programs by just doodling manual sketches that the computer would interpret and run for us —after all, computers should be getting smart enough to be able to interpret human language instead of the other way around.</description>
+    </item>
+    
+  </channel>
+</rss>

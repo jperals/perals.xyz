@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Joan Perals</title>
+    <link>/projects/</link>
+    <description>Recent content in Projects on Joan Perals</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Big Bother</title>
+      <link>/projects/big-bother/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/big-bother/</guid>
+      <description>Big Bother (sic) is a generative sketch that features an eye on a large screen. This eye has the ability to mutate a little when it detects movement around: a new pupil appears to follow every “target”, with the aim to follow each watcher individually.
+This piece was exhibited on a huge screen in the center of Madrid as part of MediaLab Prado’s #ProgramaLaPlaza contest in 2014.
+ You can check and tweak the code here, and see other submitted projects here.</description>
+    </item>
+    
+    <item>
+      <title>Doodlescript</title>
+      <link>/projects/doodlescript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/doodlescript/</guid>
+      <description>How would computer programming look like if we could reinvent it now from the ground up?
+With this project I wanted to radically question the way we program. Why do we type code at all? Maybe we could just use visual symbols. And then maybe we could even write programs by just doodling manual sketches that the computer would interpret and run for us —after all, computers should be getting smart enough to be able to interpret human language instead of the other way around.</description>
+    </item>
+    
+    <item>
+      <title>Garbuix</title>
+      <link>/projects/garbuix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/garbuix/</guid>
+      <description>Exploring diverse patterns in 2D particle systems, using Processing.
+Garbuix (/gəɾβúʃ/) is the combination of a Processing sketch with a web-based user interface to explore visually interesting behaviours of 2D systems.
+We have a set of points randomly distributed on a 2D plane. Just by combining a set of rules on the way in which they should move, interact with each other and be displayed, we can go through a rich and diverse set of visual experiences.</description>
+    </item>
+    
+    <item>
+      <title>Terra Cognita</title>
+      <link>/projects/terra-cognita/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/terra-cognita/</guid>
+      <description>As I moved to Berlin in 2012, I started tracking my movements and then wrote an OpenFrameworks app that let me visualize my process of getting to know a new place.
+&amp;nbsp;
+ &amp;nbsp;
+My walkabouts were rendered at high speed mapping the speed to colours, so one can even tell where and when I had been commuting with the train (red), walking (green), taking a tram (purple) or even riding a bike (blue).</description>
+    </item>
+    
+  </channel>
+</rss>

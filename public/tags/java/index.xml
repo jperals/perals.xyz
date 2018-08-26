@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Joan Perals</title>
+    <link>/tags/java/</link>
+    <description>Recent content in Java on Joan Perals</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Big Bother</title>
+      <link>/projects/big-bother/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/big-bother/</guid>
+      <description>Big Bother (sic) is a generative sketch that features an eye on a large screen. This eye has the ability to mutate a little when it detects movement around: a new pupil appears to follow every “target”, with the aim to follow each watcher individually.
+This piece was exhibited on a huge screen in the center of Madrid as part of MediaLab Prado’s #ProgramaLaPlaza contest in 2014.
+ You can check and tweak the code here, and see other submitted projects here.</description>
+    </item>
+    
+    <item>
+      <title>Garbuix</title>
+      <link>/projects/garbuix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/garbuix/</guid>
+      <description>Exploring diverse patterns in 2D particle systems, using Processing.
+Garbuix (/gəɾβúʃ/) is the combination of a Processing sketch with a web-based user interface to explore visually interesting behaviours of 2D systems.
+We have a set of points randomly distributed on a 2D plane. Just by combining a set of rules on the way in which they should move, interact with each other and be displayed, we can go through a rich and diverse set of visual experiences.</description>
+    </item>
+    
+  </channel>
+</rss>

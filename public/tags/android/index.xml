@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Joan Perals</title>
+    <link>/tags/android/</link>
+    <description>Recent content in Android on Joan Perals</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Doodlescript</title>
+      <link>/projects/doodlescript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/doodlescript/</guid>
+      <description>How would computer programming look like if we could reinvent it now from the ground up?
+With this project I wanted to radically question the way we program. Why do we type code at all? Maybe we could just use visual symbols. And then maybe we could even write programs by just doodling manual sketches that the computer would interpret and run for us —after all, computers should be getting smart enough to be able to interpret human language instead of the other way around.</description>
+    </item>
+    
+  </channel>
+</rss>

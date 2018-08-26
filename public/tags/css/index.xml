@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Css on Joan Perals</title>
+    <link>/tags/css/</link>
+    <description>Recent content in Css on Joan Perals</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/jobs/2010-2010-linka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jobs/2010-2010-linka/</guid>
+      <description> Basically, I took care of the implementation of page layouts according to PSD-based documents for various clients. Also some minor photo editing. </description>
+    </item>
+    
+  </channel>
+</rss>
