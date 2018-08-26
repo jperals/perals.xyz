@@ -24,6 +24,7 @@
       }
     }
     .clip-effect {
+      -webkit-clip-path: circle(13% at 83% 27%);
       clip-path: circle(13% at 83% 27%);
       position: absolute;
       width: 100%;
@@ -68,10 +69,11 @@
     transition: color $duration;
   }
   .clip-effect {
-    transition: clip-path $duration;
+    transition: -webkit-clip-path $duration, clip-path $duration;
   }
   &:hover {
     .clip-effect {
+      -webkit-clip-path: circle(100% at 50% 50%);
       clip-path: circle(100% at 50% 50%);
     }
     .columns {
