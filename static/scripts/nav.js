@@ -14,16 +14,15 @@
   window.addEventListener('scroll', function () {
     if (nav) {
       if (secondSection) {
-        updateNavVisibility(nav, secondSection);
+        updateNavVisibility();
       }
-      updateLinkStates(nav);
+      updateLinkStates();
     }
   });
 
   function updateNavVisibility() {
     const secondSectionTop = secondSection.getBoundingClientRect().top;
-    const navHeight = nav.clientHeight;
-    if (secondSectionTop <= navHeight) {
+    if (secondSectionTop <= 0) {
       nav.classList.remove(navHiddenClass);
     } else {
       nav.classList.add(navHiddenClass);
