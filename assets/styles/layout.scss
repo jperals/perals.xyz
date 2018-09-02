@@ -45,13 +45,18 @@ section > .graph {
 }
 
 @media (max-width: $breakpoint_wide - 1px) {
+  $space-around: 34px;
   section {
-    padding-bottom: 2em;
-    padding-top: 2em;
+    padding-top: $space-around;
+    padding-bottom: $space-around;
+    &:before {
+      margin-left: - $space-around;
+      width: calc(100% + #{2*$space-around});
+    }
   }
   .container {
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: $space-around;
+    padding-right: $space-around;
   }
 }
 @media (min-width: $breakpoint_wide) {
