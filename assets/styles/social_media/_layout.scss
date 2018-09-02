@@ -14,7 +14,6 @@
   .sm-name {
     @extend .col-xs-3;
     @extend .col-m-5;
-    padding-right: 2em;
     text-align: right;
   }
   .sm-link {
@@ -26,5 +25,17 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+@media (max-width: $breakpoint_mid - 1px) {
+  .sm-name {
+    padding-right: 1.1em;
+  }
+}
+
+@media (min-width: $breakpoint_mid) {
+  .sm-name {
+    padding-right: 2em;
   }
 }
