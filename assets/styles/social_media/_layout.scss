@@ -1,4 +1,5 @@
 @import '../columns';
+@import '../breakpoints';
 
 .social-media-list {
   margin-top: 0;
@@ -11,12 +12,16 @@
     }
   }
   .sm-name {
-    @extend .col-xs-5;
+    @extend .col-xs-3;
+    @extend .col-m-5;
     padding-right: 2em;
     text-align: right;
   }
+  .sm-link {
+    @extend .col-xs-9;
+    @extend .col-m-7;
+  }
   .username {
-    @extend .col-xs-7;
     border-bottom: 0 none;
     &:hover {
       text-decoration: underline;
