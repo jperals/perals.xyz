@@ -1,5 +1,6 @@
-@import '_colors';
-@import '_variables';
+@import '../colors';
+@import '../layout';
+@import '../variables';
 
 .tags {
   .tag, .experience-time {
@@ -9,9 +10,6 @@
   }
   li {
     position: relative;
-  }
-  .experience-time.overflows {
-    position: absolute;
   }
   .tag {
     background-color: nth($grays, 7) !important;
@@ -27,6 +25,25 @@
     }
     li {
       margin-bottom: 1em;
+    }
+  }
+  li.span-10 .experience-time {
+    position: absolute;
+  }
+}
+
+@media (max-width: $breakpoint_wide - 1px) {
+  .tags {
+    li.span-9 .experience-time {
+      position: absolute;
+    }
+  }
+}
+
+@media (max-width: $breakpoint_mid - 1px) {
+  .tags {
+    li.span-8 .experience-time {
+      position: absolute;
     }
   }
 }
