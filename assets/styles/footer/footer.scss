@@ -12,7 +12,10 @@ footer {
   border-top: 1px solid nth($grays, 7);
   padding-top: 1em;
   padding-bottom: 1em;
-  ul {
-    color: nth($grays, 7);
+  .footer-heading {
+    color: nth($grays, 3);
+  }
+  .license {
+    color: nth($grays, 4);
   }
 }
