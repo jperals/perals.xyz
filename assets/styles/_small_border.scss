@@ -10,9 +10,9 @@
     display: block;
     width: $width;
     height: 1px;
-    background-color: $color !important;
+    border-top: 1px solid $color;
     position: absolute;
-    top: 0;
+    top: -1px;
     left: $margin;
     right: $margin;
   }
