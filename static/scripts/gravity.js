@@ -34,10 +34,9 @@ function triggerFall() {
   documentHeight = window.innerHeight;
   groundShape.Set(new box2d.b2Vec2(0.0, 0.0), new box2d.b2Vec2(documentWidth / pixelsPerMeter, 0.0));
   ground.CreateFixture(groundShape, 0.0);
-  const layoutProps = []
-  getNNodes({maxNodes}).forEach(function (el) {
-    // CSS transform properties don't seem to have effect on inline elements,
-    // so we replace `inline` by `inline-block`.
+  const layoutProps = [];
+  const nodes = getNNodes({maxNodes});
+  nodes.forEach(function (el) {
     const box = el.getBoundingClientRect();
     const left = box.left;
     const top = box.top;
@@ -51,7 +50,6 @@ function triggerFall() {
       y: top + height / 2
     };
     layoutProps.push({
-      display: 'inline-block',
       left: box.left + 'px',
       top: box.top + 'px',
       width: width + 'px',
@@ -80,13 +78,18 @@ function triggerFall() {
       body: body
     });
   });
-  getNNodes({maxNodes}).forEach(function (node, index) {
-    Object.assign(node.style, layoutProps[index]);
+  nodes.forEach(function (node, index) {
+    node.classList.add('with-mass');
+    // CSS transform properties don't seem to have effect on inline elements,
+    // so we replace `inline` by `inline-block`.
+    const computedStyle = window.getComputedStyle(node);
+    const displayProp = computedStyle.getPropertyValue('display');
+    if (displayProp === 'inline') {
+      node.style.display = 'inline-block';
+    }
   });
-  //document.body.style.transform = 'translateY(-' + window.scrollY + 'px)';
   // Disable scrolling
   document.body.style.overflow = 'hidden';
-  window.scroll(0, 0);
   started = true;
   requestAnimationFrame(step);
 }
@@ -121,7 +124,6 @@ function getNNodes({ nodes = [document.body], maxNodes = 10 }) {
     const invisible = node.computedStyleMap().get('visibility').value === 'hidden';
     const outOfView = box.top - window.scrollY > documentHeight || box.right - window.scrollX > documentWidth;
     if (invisible || outOfView) {
-      //node.style.visibility = 'hidden';
       continue;
     }
     if (node.childElementCount && !(hasOwnText(node))) {
@@ -132,7 +134,6 @@ function getNNodes({ nodes = [document.body], maxNodes = 10 }) {
       })
     } else {
       // Just add the node
-      node.classList.add('with-mass');
       newNodes.push(node);
     }
   }
@@ -170,12 +171,12 @@ function toggle() {
 initBox2D();
 
 document.addEventListener('keyup', (event) => {
-  document.body.classList.add('with-gravity')
   switch (event.key) {
     case 'Escape':
       toggle();
       break;
     case 'g':
+      document.body.classList.add('with-gravity');
       triggerFall();
   }
 });

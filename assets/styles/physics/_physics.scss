@@ -3,7 +3,7 @@ body {
     &,
     &:before,
     &:after {
-      //transition: border-color 1s;
+      transition: border-color 1s;
     }
   }
 }
