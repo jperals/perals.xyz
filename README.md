@@ -23,7 +23,4 @@ hugo
 
 ```sh
 ./publish_to_gh_pages.sh
-cd public
-git push
-cd ..
 ```
