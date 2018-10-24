@@ -12,6 +12,9 @@
   });
 
   window.addEventListener('scroll', function () {
+    if (document.body.classList.contains('with-gravity')) {
+      return;
+    }
     if (nav) {
       if (secondSection) {
         updateNavVisibility();

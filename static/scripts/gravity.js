@@ -116,7 +116,9 @@ function getNNodes({ nodes = [document.body], maxNodes = 10 }) {
       continue;
     }
     const box = node.getBoundingClientRect();
-    if (box.top - window.scrollY > documentHeight || box.right - window.scrollX > documentWidth) {
+    const invisible = node.computedStyleMap().get('visibility').value === 'hidden';
+    const outOfView = box.top - window.scrollY > documentHeight || box.right - window.scrollX > documentWidth;
+    if (invisible || outOfView) {
       node.style.visibility = 'hidden';
       continue;
     }
@@ -128,7 +130,7 @@ function getNNodes({ nodes = [document.body], maxNodes = 10 }) {
       })
     } else {
       // Just add the node
-      node.classList.add('with-mass')
+      node.classList.add('with-mass');
       newNodes.push(node);
     }
   }
