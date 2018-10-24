@@ -1,6 +1,7 @@
 baseURL = ""
 languageCode = "en-us"
 title = "Joan Perals"
+googleAnalytics = "UA-7899353-3"
 
 [params]
 avatar = "img/profile-color-transparent-bg.png"
