@@ -33,17 +33,10 @@ function triggerFall() {
   documentHeight = window.innerHeight;
   groundShape.Set(new box2d.b2Vec2(0.0, 0.0), new box2d.b2Vec2(documentWidth / pixelsPerMeter, 0.0));
   ground.CreateFixture(groundShape, 0.0);
-  getNNodes({maxNodes}).map(function (el) {
+  const layoutProps = []
+  getNNodes({maxNodes}).forEach(function (el) {
     // CSS transform properties don't seem to have effect on inline elements,
     // so we replace `inline` by `inline-block`.
-    const computedStyle = window.getComputedStyle(el)
-    const displayProp = computedStyle.getPropertyValue('display')
-    if (displayProp === 'inline') {
-      el.style.display = 'inline-block'
-    }
-    // Also, hard-code the width and height to avoid surprises...
-    el.style.width = computedStyle.getPropertyValue('width');
-    el.style.height = computedStyle.getPropertyValue('height');
     const box = el.getBoundingClientRect();
     const left = box.left;
     const top = box.top;
@@ -56,6 +49,18 @@ function triggerFall() {
       x: left + width / 2,
       y: top + height / 2
     };
+    layoutProps.push({
+      display: 'inline-block',
+      left: box.left + 'px',
+      top: box.top + 'px',
+      width: width + 'px',
+      height: height + 'px',
+      position: 'fixed',
+      'min-width': 'unset',
+      'max-width': 'unset',
+      'min-height': 'unset',
+      'max-height': 'unset'
+    });
     const shape = new box2d.b2PolygonShape();
     shape.SetAsBox((width / 2) / pixelsPerMeter, (height / 2) / pixelsPerMeter);
     const bodyDefinition = new box2d.b2BodyDef();
@@ -73,6 +78,9 @@ function triggerFall() {
       domElement: el,
       body: body
     });
+  });
+  getNNodes({maxNodes}).forEach(function (node, index) {
+    Object.assign(node.style, layoutProps[index]);
   });
   let previous = undefined;
 
@@ -92,7 +100,7 @@ function triggerFall() {
     if (!stopped) requestAnimationFrame(step);
   }
   // Disable scrolling
-  document.body.style.transform = 'translateY(-' + window.scrollY + 'px)';
+  //document.body.style.transform = 'translateY(-' + window.scrollY + 'px)';
   document.body.style.overflow = 'hidden';
   window.scroll(0, 0);
   window.requestAnimationFrame(step);
@@ -109,6 +117,7 @@ function getNNodes({ nodes = [document.body], maxNodes = 10 }) {
     }
     const box = node.getBoundingClientRect();
     if (box.top - window.scrollY > documentHeight || box.right - window.scrollX > documentWidth) {
+      node.style.visibility = 'hidden';
       continue;
     }
     if (node.childElementCount && !(hasOwnText(node))) {
@@ -143,17 +152,17 @@ function getOwnText(node) {
   return [].reduce.call(node.childNodes, function(a, b) { return a + (b.nodeType === 3 ? b.textContent : ''); }, '')
 }
 
-function stop() {
-  stopped = true
+function toggle() {
+  stopped = !stopped
 }
 
 document.addEventListener('keyup', (event) => {
   document.body.classList.add('with-gravity')
   switch (event.key) {
     case 'Escape':
-      stop()
-      break
+      toggle();
+      break;
     case 'g':
-      triggerFall()
+      triggerFall();
   }
 });
