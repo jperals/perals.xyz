@@ -1,10 +1,7 @@
 const maxNodes = 200;
-const dpi = 113.5;
-const dotsPerCentimeter = dpi / 2.54;
 const pixelsPerMeter = 10;
 const gravityFactor = 9.81;
 const precision = 3;
-const fps = 60;
 const boxes = [];
 let gravity;
 let world;
@@ -14,16 +11,20 @@ let groundShape;
 let box2d;
 let documentWidth;
 let documentHeight;
+let started = false;
 let stopped = false;
+let previousTimestamp;
 
-Box2D().then(function (b) {
-  box2d = b;
-  gravity = new box2d.b2Vec2(0.0, -gravityFactor);
-  world = new box2d.b2World(gravity);
-  bd_ground = new box2d.b2BodyDef();
-  ground = world.CreateBody(bd_ground);
-  groundShape = new box2d.b2EdgeShape();
-});
+function initBox2D () {
+  Box2D().then(function (b) {
+    box2d = b;
+    gravity = new box2d.b2Vec2(0.0, -gravityFactor);
+    world = new box2d.b2World(gravity);
+    bd_ground = new box2d.b2BodyDef();
+    ground = world.CreateBody(bd_ground);
+    groundShape = new box2d.b2EdgeShape();
+  });
+}
 
 function triggerFall() {
   if (typeof gravity === 'undefined' || typeof box2d === 'undefined') {
@@ -82,29 +83,30 @@ function triggerFall() {
   getNNodes({maxNodes}).forEach(function (node, index) {
     Object.assign(node.style, layoutProps[index]);
   });
-  let previous = undefined;
-
-  function step(timestamp) {
-    if (!previous) previous = timestamp;
-    const progress = timestamp - previous;
-    previous = timestamp;
-    world.Step(progress / 1000, precision, precision);
-    let x, y, position, angle;
-    for (const box of boxes) {
-      position = box.body.GetPosition();
-      angle = -box.body.GetAngle();
-      x = position.get_x() * pixelsPerMeter - box.originalCenter.x;
-      y = documentHeight - position.get_y() * pixelsPerMeter - box.originalCenter.y;
-      box.domElement.style.transform = 'translate(' + x + 'px, ' + y + 'px) rotate(' + angle + 'rad)';
-    }
-    if (!stopped) requestAnimationFrame(step);
-  }
-  // Disable scrolling
   //document.body.style.transform = 'translateY(-' + window.scrollY + 'px)';
+  // Disable scrolling
   document.body.style.overflow = 'hidden';
   window.scroll(0, 0);
-  window.requestAnimationFrame(step);
+  started = true;
+  requestAnimationFrame(step);
 }
+
+function step(timestamp) {
+  if (!previousTimestamp) previousTimestamp = timestamp;
+  const progress = timestamp - previousTimestamp;
+  previousTimestamp = timestamp;
+  world.Step(progress / 1000, precision, precision);
+  let x, y, position, angle;
+  for (const box of boxes) {
+    position = box.body.GetPosition();
+    angle = -box.body.GetAngle();
+    x = position.get_x() * pixelsPerMeter - box.originalCenter.x;
+    y = documentHeight - position.get_y() * pixelsPerMeter - box.originalCenter.y;
+    box.domElement.style.transform = 'translate(' + x + 'px, ' + y + 'px) rotate(' + angle + 'rad)';
+  }
+  if (!stopped) requestAnimationFrame(step);
+}
+
 
 // Get tree nodes going as deep as possible in the tree before surpassing a certain limit in the number of nodes
 function getNNodes({ nodes = [document.body], maxNodes = 10 }) {
@@ -119,7 +121,7 @@ function getNNodes({ nodes = [document.body], maxNodes = 10 }) {
     const invisible = node.computedStyleMap().get('visibility').value === 'hidden';
     const outOfView = box.top - window.scrollY > documentHeight || box.right - window.scrollX > documentWidth;
     if (invisible || outOfView) {
-      node.style.visibility = 'hidden';
+      //node.style.visibility = 'hidden';
       continue;
     }
     if (node.childElementCount && !(hasOwnText(node))) {
@@ -155,8 +157,17 @@ function getOwnText(node) {
 }
 
 function toggle() {
-  stopped = !stopped
+  if (!started) {
+    return;
+  }
+  stopped = !stopped;
+  if (!stopped) {
+    previousTimestamp = performance.now();
+    requestAnimationFrame(step);
+  }
 }
+
+initBox2D();
 
 document.addEventListener('keyup', (event) => {
   document.body.classList.add('with-gravity')
