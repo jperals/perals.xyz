@@ -11,7 +11,7 @@
   left: 0;
   display: flex;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -20,7 +20,9 @@
 
 body.with-lightbox {
   overflow: hidden;
-  & > *:not(#lightbox) {
-    filter: blur(10px);
+  & > .footer,
+  & > .main,
+  & > nav {
+    filter: blur(5px);
   }
 }
