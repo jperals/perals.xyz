@@ -176,7 +176,9 @@ document.addEventListener('keyup', (event) => {
       toggle();
       break;
     case 'g':
-      document.body.classList.add('with-gravity');
-      triggerFall();
+      if(!started) {
+        document.body.classList.add('with-gravity');
+        triggerFall();
+      }
   }
 });
