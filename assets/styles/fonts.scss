@@ -8,6 +8,25 @@ $special-font-stack-1: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
   src: url('/fonts/work-sans/WorkSans-Regular.otf');
 }
 
+@font-face {
+  font-family: 'Work Sans';
+  font-style: italic;
+  src: url('/fonts/work-sans/WorkSans-Italic.otf');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-weight: bold;
+  src: url('/fonts/work-sans/WorkSans-SemiBold.otf');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-weight: bold;
+  font-style: italic;
+  src: url('/fonts/work-sans/WorkSans-SemiBoldItalic.otf');
+}
+
 body,
 section
 {
