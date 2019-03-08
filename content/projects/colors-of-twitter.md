@@ -36,7 +36,7 @@ __Catalan__: The Catalan language appears intermixed with Spanish in the way I w
 <img alt="Europe" class="enlarge" src="img/map-20190307-1551993116891-504273points.png"/>
 <div>
 <p class="img-comment">
-__Europe__: Most of the European language boundaries strongly follow state boundaries, with the notable exception of minoritarian languages like Basque, Catalan, Galician, Welsh... Belgium, roughly split in two halves, is also an interesting case.
+__Europe__: Most of the European language boundaries strongly follow state boundaries, with the notable exception of minoritarian languages like Basque, Catalan, Galician, Norwegian Nynorsk, Welsh... Belgium, roughly split in two halves, is also an interesting case.
 </p>
 
 
