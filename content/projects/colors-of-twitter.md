@@ -8,7 +8,7 @@ tags: [Node.js, MongoDB, Twitter, maps, visualization]
 image: img/map-20190209-1549668005938-323656points.png
 ---
 
-Basically by combining Twitter feed data (90 million tweets and counting) with a language detector (together with some geometric post-processing, and lots of hours of coding), I was able to take a quite detailed look at the language geography of the Twitter universe.
+Basically by combining Twitter feed data (90 million tweets and counting) with a language detector (together with some geometric post-processing, and lots of hours of coding), I was able to offer a quite detailed look at the language geography of the Twitter universe.
 
 (Note: to compensate the dominance of English on Twitter, I manually limited the boundaries of this language in particular.)
 
@@ -22,7 +22,7 @@ And also static PNG images, which can be useful to share highlights about specif
 <img alt="Africa" src="img/map-20190307-1551994567978-504409points.png"/>
 </div>
 <p class="img-comment">
-__Africa__: Considering how Twitter users often use the language that grants a biggest audience, I am happy about the language diversity that shows up in Africa, especially in the East and South, and in the Gulf of Guinea.
+__Africa__: Considering how Twitter users often choose the language with a biggest audience, I am happy about the language diversity that shows up in Africa, especially in the East, South, and the Gulf of Guinea.
 </p>
 
 <div>
@@ -36,7 +36,7 @@ __Catalan__: The Catalan language appears intermixed with Spanish in the way I w
 <img alt="Europe" src="img/map-20190307-1551993116891-504273points.png"/>
 <div>
 <p class="img-comment">
-__Europe__: Most of the European language boundaries strongly follow state boundaries, with the notable exception of minoritarian languages like Basque, Catalan, Galician, Welsh... Belgium is also an interesting case, split in half and with its capital belonging to the side it doesn't sit in.
+__Europe__: Most of the European language boundaries strongly follow state boundaries, with the notable exception of minoritarian languages like Basque, Catalan, Galician, Welsh... Belgium, roughly split in two halves, is also an interesting case.
 </p>
 
 
