@@ -57,10 +57,12 @@ nav {
 
 @media (min-width: $breakpoint_wide) {
   nav {
+    opacity: 0;
     ul {
       opacity: 0;
     }
     &:not(.hidden) {
+      opacity: 1;
       visibility: visible;
       ul {
         opacity: 1;

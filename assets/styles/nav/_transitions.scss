@@ -1,7 +1,7 @@
 @import '../_animation';
 
 nav {
-  .pseudo-avatar {
+  .section-links .pseudo-avatar {
     transition: color $transition_duration_short, transform $transition_duration_short;
     &:hover {
       opacity: 1;
@@ -11,4 +11,5 @@ nav {
   li a {
     transition: color .3s;
   }
+  transition: opacity 1s !important;
 }

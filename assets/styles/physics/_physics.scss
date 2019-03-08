@@ -1,4 +1,4 @@
-body {
+body.with-gravity {
   *:not(.with-mass) {
     &,
     &:before,
@@ -6,8 +6,6 @@ body {
       transition: border-color 1s;
     }
   }
-}
-body.with-gravity {
   *:not(.with-physics) {
     &,
     &:before,
