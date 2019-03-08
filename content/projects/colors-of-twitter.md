@@ -23,7 +23,7 @@ And also static PNG images, which can be useful to share highlights about specif
 </div>
 
 <p class="img-comment">
-<em>Africa</em>: Considering how Twitter users often choose the language with a biggest audience, I am happy about the language diversity that shows up in Africa, especially in the East, South, and the Gulf of Guinea.
+<em>Africa</em>: Considering how Twitter users often choose the language with a biggest audience, I am happy about the language diversity that shows up in Africa, especially in the South, the East, and the Gulf of Guinea.
 </p>
 
 <div>
