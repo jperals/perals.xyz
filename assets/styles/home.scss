@@ -12,7 +12,7 @@
   }
   section {
     color: nth($grays, 3);
-    font-size: 17px;
+    font-size: 16px;
     font-weight: normal;
     &:not(:first-child):before {
       border-bottom: 1px solid nth($grays, 5);
