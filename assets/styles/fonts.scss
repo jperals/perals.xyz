@@ -1,12 +1,21 @@
 $monospace-font-stack: 'Ubuntu Mono', 'Menlo', monospace;
-$body-font-stack: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+$body-font-stack: 'Work Sans', 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
 $heading-font-stack: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
 $special-font-stack-1: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/fonts/work-sans/WorkSans-Regular.otf');
+}
 
 body,
 section
 {
   font-family: $body-font-stack;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-stack;
 }
 
 .small {
