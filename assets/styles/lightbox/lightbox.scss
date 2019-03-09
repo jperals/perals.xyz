@@ -12,14 +12,27 @@
   display: flex;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
   z-index: 20;
+  .lightbox-image {
+    $padding: 30px;
+    position: absolute;
+    left: $padding;
+    right: $padding;
+    top: $padding;
+    bottom: $padding;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  transition: opacity .3s;
+  opacity: 0;
 }
 
 body.with-lightbox {
   overflow: hidden;
+  & > .main {
+    overflow-y: scroll;
+  }
   & > .footer,
   & > .main,
   & > nav {
