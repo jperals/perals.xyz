@@ -6,11 +6,12 @@ excerpt: Generating language maps from Twitter data
 link: https://jperals.github.io/colors-of-twitter/
 tags: [Node.js, MongoDB, Twitter, maps, visualization]
 image: img/map-20190209-1549668005938-323656points.png
+description: Generating language maps with Twitter data
 ---
 
-Basically by combining Twitter feed data (90 million tweets and counting) with a language detector (together with some geometric post-processing, and lots of hours of coding), I was able to offer a quite detailed look at the language geography of the Twitter universe.
+Basically by combining Twitter feed data (100 million tweets and counting) with a language detector (together with some geometric post-processing, and lots of hours of coding), I was able to offer a quite detailed look at the language geography of the Twitter universe.
 
-(Note: to compensate the dominance of English on Twitter, I manually limited the boundaries of this language in particular.)
+_Note: to compensate the dominance of English on Twitter, I manually limited the boundaries of this language in particular._
 
 I can generate GeoJSON output, which can be displayed as an interactive map:
 
@@ -30,14 +31,14 @@ And also static PNG images, which can be useful to share highlights about specif
 <img class="enlarge" src="img/map-20190307-1551990717706-504084points.png"/>
 </div>
 <p class="img-comment">
-<em>Catalan</em>: The Catalan language appears intermixed with Spanish in the way I would have more or less expected, with Catalan dominating in inner Catalonia and Spanish dominating in most coastal areas, as well as in most of the Valencian Country and the Balearic Islands.
+<em>Catalan</em>: The use of Catalan seems much stronger in Catalonia than in other Catalan-speaking territories like the Balearic Islands or the Valencian Country. The map seems to confirm a specially advanced state of linguistic assimiliation in the latter case.
 </p>
 
 <div>
 <img alt="Europe" class="enlarge" src="img/map-20190307-1551993116891-504273points.png"/>
 <div>
 <p class="img-comment">
-<em>Europe</em>: Most of the European language boundaries strongly follow state boundaries, with the notable exception of minoritarian languages like Basque, Catalan, Galician, Norwegian Nynorsk, Welsh... Belgium, roughly split in two halves, is also an interesting case.
+<em>Europe</em>: Most of the European language areas strongly follow state boundaries, with the notable exception of minoritarian languages like Basque, Catalan, Galician, Norwegian Nynorsk, Welsh... Belgium —which is roughly, but not exactly, split in two halves— is also an interesting case.
 </p>
 
 

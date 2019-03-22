@@ -1,6 +1,7 @@
 baseURL = ""
 languageCode = "en-us"
 title = "Joan Perals"
+description = "Berlin-based web developer and creative technologist with 10 years of professional experience."
 googleAnalytics = "UA-7899353-3"
 
 [params]
