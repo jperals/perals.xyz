@@ -1,9 +1,12 @@
 <div class="page-heading">
-    <h1>
-        {{ if .Params.heading }}
-        {{ .Params.heading }}
-        {{ else }}
-        {{ .Title }}
-        {{ end }}
-    </h1>
+  <h1>
+    {{ if .Params.heading }}
+    {{ .Params.heading }}
+    {{ else }}
+    {{ .Title }}
+    {{ end }}
+  </h1>
+  {{ if .Params.year }}
+  <div class="meta year">{{ .Params.year }}</div>
+  {{ end }}
 </div>
