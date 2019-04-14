@@ -24,20 +24,17 @@
             </div>
             {{ end }}
         </section>
-        <section id="contact">
-            {{ partial "contact.html" . }}
-        </section>
-        <section id="professional-experience">
+        <section>
             {{ partial "technologies.html" }}
         </section>
-        <section class="row">
+        <section class="row" id="professional-experience">
             {{ partial "professional_experience.html" . }}
-        </section>
-        <section id="projects">
-            {{ partial "projects.html" . }}
         </section>
         <section class="row" id="academic-background">
             {{ partial "academic_background.html" }}
+        </section>
+        <section id="projects">
+            {{ partial "projects.html" . }}
         </section>
         {{ $totalpostscount := len (where .Data.Pages "Section" "") }}
         {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
@@ -58,6 +55,9 @@
             </ul>
         </section>
         {{ end }}
+        <section id="contact">
+            {{ partial "contact.html" . }}
+        </section>
     </div>
 </div>
 {{ partial "nav.html" . }}
