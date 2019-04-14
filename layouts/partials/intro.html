@@ -1,0 +1,21 @@
+{{ if .Content }}
+{{ if .Site.Params.gravatar }}
+<img class="avatar" src="https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=50"
+     rcset="https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=100 2x, https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=150 3x, https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=200 4x">
+{{ else if .Site.Params.avatar }}
+{{ $.Scratch.Add "srcset" (slice (printf "%s 1x" (.Site.Params.avatar|absURL))) }}
+{{ $directory := replaceRE "^(.*)/[^/]+$" "$1" .Site.Params.avatar }}
+{{ $basename := replaceRE "^.*/([^./]+).*$" "$1" .Site.Params.avatar }}
+{{ $extension := replaceRE "^.*/[^.]+\\.([^.]+)$" "$1" .Site.Params.avatar }}
+{{ range (readDir (printf "static/%s" $directory)) }}
+{{ if findRE (printf "^%s-\\d+x\\.%s$" $basename $extension) .Name }}
+{{ $.Scratch.Add "srcset" (slice (replaceRE (printf "^(%s)-(\\d+x)\\.(%s)$" $basename $extension) (printf "%s/$1-$2.$3 $2" ($directory|absURL)) .Name)) }}
+{{ end }}
+{{ end }}
+{{ $srcset := delimit ($.Scratch.Get "srcset") "," }}
+<img class="avatar" src="/{{ .Site.Params.avatar }}" {{ printf "srcset=%q" $srcset | safeHTMLAttr }}>
+{{ end }}
+<div class="markdown">
+  {{ .Content }}
+</div>
+{{ end }}
