@@ -11,13 +11,11 @@ description: Generating language maps with Twitter data
 
 Basically by combining Twitter feed data (100 million tweets and counting) with a language detector (together with some geometric post-processing, and lots of hours of coding), I was able to offer a quite detailed look at the language geography of the Twitter universe.
 
-_Note: to compensate the dominance of English on Twitter, I manually limited the boundaries of this language in particular._
-
-I can generate GeoJSON output, which can be displayed as an interactive map:
+By generating GeoJSON I can display the data in an interactive map:
 
 <iframe src="https://jperals.github.io/colors-of-twitter/#embed" width="100%" height="450" frameborder="0"></iframe>
 
-And also static PNG images, which can be useful to share highlights about specific regions:
+And PNG output can also be useful to easily share highlights about specific regions:
 
 <div>
     <img alt="Africa" class="enlarge" src="img/map-20190307-1551994567978-504409points.png">
