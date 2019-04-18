@@ -1,3 +1,4 @@
+<div class="profile">
 {{ if .Content }}
 {{ if .Site.Params.gravatar }}
 <img class="avatar" src="https://gravatar.com/avatar/{{ .Site.Params.gravatar }}?s=50"
@@ -19,3 +20,19 @@
   {{ .Content }}
 </div>
 {{ end }}
+</div>
+<div class="calls-to-action">
+  <a class="call-to-action" href="/cv-joanperals-2019.04.17_01.pdf">Check my CV</a>
+  <a class="call-to-action" href="#projects">See some projects</a>
+  <a class="call-to-action" href="#contact">Get in touch</a>
+</div>
+<div class="calls-to-action single">
+  <a class="call-to-action subtle scroll-down" href="#technical-skills">
+    <div>
+      Or just keep reading
+    </div>
+    <div class="chevron-down">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </a>
+</div>
