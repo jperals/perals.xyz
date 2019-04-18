@@ -1,11 +1,10 @@
 @import './_breakpoints.scss';
-@import './_palette';
 @import './_small_border';
 
 section.intro {
   line-height: 1.5;
   padding-bottom: 5em;
-  padding-top: 4em;
+  padding-top: 2em;
 }
 
 .section-intro-text {
@@ -13,6 +12,15 @@ section.intro {
   @include smallBorderBottom(100%);
   padding-bottom: 3em;
   text-align: center;
+}
+
+section.intro .calls-to-action {
+  margin-top: 5em;
+}
+
+.call-to-action.scroll-down .chevron-down {
+  margin-top: 1em;
+  animation: bounce-vertical 1s ease-in-out infinite;
 }
 
 @media (max-width: $breakpoint_wide - 1px) {
@@ -42,12 +50,43 @@ section.intro {
 }
 
 @media (min-width: $breakpoint_wide) {
-  .intro {
+  .intro .profile {
     display: flex;
     align-items: center;
     .avatar {
       margin-right: 3%;
       max-width: 120px;
     }
+  }
+}
+
+@media (max-width: $breakpoint_wide - 1px) {
+  .call-to-action {
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: $breakpoint_wide) {
+  .calls-to-action:not(.single) {
+    display: flex;
+    justify-content: space-between;
+  }
+  .calls-to-action.single {
+    text-align: center;
+    .call-to-action {
+      margin-left: auto;
+      margin-right: auto;
+      display: inline-block;
+    }
+  }
+}
+
+@keyframes bounce-vertical {
+  0%, 100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
   }
 }

@@ -1,3 +1,4 @@
+@import './button';
 @import './_colors.scss';
 @import './_breakpoints.scss';
 
@@ -5,7 +6,10 @@
   padding-top: 4em;
   padding-bottom: 4em;
   .avatar {
-    background-color: #d0d0ef;
+    $color1: hsl(230, 35%, 67%);
+    $color2: hsl(245, 30%, 80%);
+    background-color: $color1;
+    background: linear-gradient(100deg, $color1 0%, $color2 100%);
   }
   .markdown blockquote {
     border-left: 0 none;
@@ -29,7 +33,7 @@
     }
     a,
     a:link {
-      @extend .button;
+      @include button;
       color: rgba(0, 0, 0, .35);
       display: inline-block;
       transition: background-color 200ms, color 200ms;

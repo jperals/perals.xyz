@@ -1,0 +1,26 @@
+@import '../_breakpoints.scss';
+@import '../button';
+@import '../_palette';
+@import '../link/link';
+
+.call-to-action {
+  @include button;
+  border-color: nth($grays, 6);
+  border-width: 1px;
+  border-style: dashed;
+  padding-left: .8em;
+  padding-right: .8em;
+  &:hover {
+    border-style: solid;
+    background-color: nth($grays, 7);
+    border-color: nth($grays, 6);
+    border-bottom-color: nth($grays, 6) !important;
+    color: nth($grays, 2);
+  }
+  &.subtle {
+    border: 0 none;
+  }
+  &:hover .like-link {
+    @extend %link:hover;
+  }
+}

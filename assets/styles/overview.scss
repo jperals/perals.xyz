@@ -1,124 +1,55 @@
-@import './_animation';
+@import './clip-effect/clip-effect';
 @import './_palette';
 @import './_small_border';
 
-.overview {
-  .overview-item {
-    position: relative;
-    h3 {
-      margin-bottom: .2em;
-    }
-    .lead {
-      color: nth($grays, 5);
-      margin-top: 0;
-    }
-    @include smallBorderTop(25%);
-    padding-top: 40px;
-    padding-bottom: 40px;
-    .content {
-      color: nth($grays, 3);
-      line-height: 1.5em;
-      em {
-        color: nth($grays, 2);
-        font-style: normal;
-      }
-    }
-    .clip-effect {
-      -webkit-clip-path: circle(0% at 83% 80px);
-      clip-path: circle(0% at 83% 80px);
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      background: linear-gradient(240deg, rgb(160, 200, 210), rgb(103, 103, 103) 80%);
-    }
-    .teaser-pic {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 100%;
-      height: 100%;
-    }
-    .tags {
-      opacity: .75;
-      padding-top: .85em;
-      padding-bottom: .85em;
-      .tag {
-        margin-top: .15em;
-        margin-bottom: .15em;
-      }
-    }
-    .columns {
-      position: relative;
-    }
+.overview-item {
+  position: relative;
+  h3 {
+    margin-bottom: .2em;
   }
-}
-
-// Teaser picture circle clip animation effect on hover
-
-.overview .overview-item.circle-clip-effect {
-  $duration: $transition_duration_long;
-  .columns,
-  .tags {
-    transition: transform $duration, text-shadow $duration;
+  .lead {
+    color: nth($grays, 5);
+    margin-top: 0;
   }
-  .heading .lead,
+  @include smallBorderTop(25%);
+  padding-top: 40px;
+  padding-bottom: 40px;
   .content {
-    transition: color $duration;
-  }
-  .heading h3,
-  .read-more-link {
-    border-bottom-color: transparent;
-    transition: color $duration, border-bottom-color $duration;
+    color: nth($grays, 3);
+    line-height: 1.5em;
+    em {
+      color: nth($grays, 2);
+      font-style: normal;
+    }
   }
   .clip-effect {
-    transition: -webkit-clip-path $duration, clip-path $duration;
+    -webkit-clip-path: circle(5% at 83% 80px);
+    clip-path: circle(5% at 83% 80px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(240deg, rgb(160, 200, 210), rgb(103, 103, 103) 80%);
   }
-  .read-more-link {
-    display: inline-block;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    &:after {
-      transition: opacity $duration;
-    }
+  .teaser-pic {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
   }
-  &:hover {
-    .clip-effect {
-      -webkit-clip-path: circle(100% at 50% 50%);
-      clip-path: circle(100% at 50% 50%);
-    }
-    .columns {
-      transform: translateX(20px);
-    }
-    .heading h3,
-    .heading .lead,
-    .content {
-      color: white !important;
-    }
-    // Add some shadow to the texts to make them more legible
-    .columns {
-      text-shadow: 0 0 8px rgba(0, 0, 0, .8);
-    }
-    h3,
-    .read-more-link {
-      border-bottom-color: white;
-    }
-    .read-more-link:after {
-      opacity: 1;
+  .tags {
+    opacity: .75;
+    padding-top: .85em;
+    padding-bottom: .85em;
+    .tag {
+      margin-top: .15em;
+      margin-bottom: .15em;
     }
   }
-}
-
-@media (max-width: $breakpoint_wide - 1px) {
-  .overview .overview-item.circle-clip-effect:hover .tags {
-    transform: translateX(20px);
-  }
-}
-
-@media (min-width: $breakpoint_wide) {
-  .overview .overview-item.circle-clip-effect:hover .tags {
-    transform: translateX(-20px);
+  .columns {
+    position: relative;
   }
 }
 
@@ -137,10 +68,3 @@
     }
   }
 }
-
-@media (min-width: $breakpoint_wide) {
-  .tags {
-    text-align: right;
-  }
-}
-

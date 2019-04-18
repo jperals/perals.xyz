@@ -1,0 +1,75 @@
+// Teaser picture circle clip animation effect on hover
+@import '../_animation';
+
+$duration: $transition_duration_extra_long;
+$easing: cubic-bezier(.07, .78, .5, 1);
+
+.circle-clip-effect {
+  .columns,
+  .tags {
+    transition: transform $duration $easing, text-shadow $duration $easing;
+  }
+  .heading .lead,
+  .content {
+    transition: color $duration $easing;
+  }
+  .heading h3,
+  .read-more-link {
+    border-bottom-color: transparent;
+    transition: color $duration $easing, border-bottom-color $duration $easing;
+  }
+  .clip-effect {
+    transition: -webkit-clip-path $duration $easing, clip-path $duration $easing;
+  }
+  .read-more-link {
+    display: inline-block;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    &:after {
+      transition: opacity $duration $easing;
+    }
+  }
+  &:hover {
+    .clip-effect {
+      -webkit-clip-path: circle(100% at 50% 50%);
+      clip-path: circle(100% at 50% 50%) !important;
+    }
+    .columns {
+      transform: translateX(20px);
+    }
+    .heading h3,
+    .heading .lead,
+    .content {
+      color: white !important;
+    }
+    // Add some shadow to the texts to make them more legible
+    .columns {
+      text-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    }
+    h3,
+    .read-more-link {
+      border-bottom-color: white;
+    }
+    .read-more-link:after {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: $breakpoint_wide - 1px) {
+  .circle-clip-effect:hover .tags {
+    transform: translateX(20px);
+  }
+}
+
+@media (min-width: $breakpoint_wide) {
+  .circle-clip-effect:hover .tags {
+    transform: translateX(-20px) ;
+  }
+}
+
+@media (min-width: $breakpoint_wide) {
+  .tags {
+    text-align: right;
+  }
+}

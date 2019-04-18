@@ -1,3 +1,35 @@
-@import './color';
-@import './layout';
 @import './read-more-link';
+@import '../palette';
+
+%link:hover,
+%link:link,
+%link:visited {
+  color: inherit;
+  border-bottom-color: nth($grays, 5);
+  &:hover {
+    border-bottom-color: nth($grays, 2);
+  }
+}
+
+%link,
+%link:hover,
+%link:link,
+%link:visited {
+  text-decoration: none;
+}
+
+%link,
+%link:hover,
+%link:link,
+%link:visited {
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  &:hover {
+    border-bottom-style: solid;
+  }
+}
+
+a,
+.like-link {
+  @extend %link;
+}
