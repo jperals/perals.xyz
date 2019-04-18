@@ -169,16 +169,31 @@ function toggle() {
 }
 
 initBox2D();
+initButton('#danger-button');
 
-document.addEventListener('keyup', (event) => {
-  switch (event.key) {
-    case 'Escape':
-      toggle();
-      break;
-    case 'g':
-      if(!started) {
-        document.body.classList.add('with-gravity');
+function initKey() {
+  document.addEventListener('keyup', (event) => {
+    switch (event.key) {
+      case 'Escape':
+        toggle();
+        break;
+      case 'g':
         triggerFall();
-      }
-  }
-});
+    }
+  });
+}
+
+function initButton (selector) {
+  const dangerButton = document.querySelector(selector);
+  if (!dangerButton) return;
+  const initialDangerButtonText = dangerButton.innerText;
+  dangerButton.addEventListener('click', function () {
+    if(started) {
+      toggle();
+      dangerButton.innerText = initialDangerButtonText;
+    } else {
+      triggerFall();
+      dangerButton.innerText = 'I told you!';
+    }
+  });
+}
