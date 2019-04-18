@@ -27,9 +27,10 @@ function initBox2D () {
 }
 
 function triggerFall() {
-  if (typeof gravity === 'undefined' || typeof box2d === 'undefined') {
+  if (started || typeof gravity === 'undefined' || typeof box2d === 'undefined') {
     return;
   }
+  document.body.classList.add('with-gravity');
   documentWidth = window.innerWidth;
   documentHeight = window.innerHeight;
   groundShape.Set(new box2d.b2Vec2(0.0, 0.0), new box2d.b2Vec2(documentWidth / pixelsPerMeter, 0.0));
@@ -117,7 +118,10 @@ function getNNodes({ nodes = [document.body], maxNodes = 10 }) {
   let someHasChildren = false;
   for (let i = 0; i < nodes.length; i++) {
     let node = nodes[i];
-    if (node.tagName === 'SCRIPT' || node.tagName === 'STYLE') {
+    if (node.tagName === 'SCRIPT' || node.tagName === 'STYLE' || node.classList.contains('no-physics')) {
+      if(node.classList.contains('physics-hide')) {
+        node.setAttribute('style', 'visibility: hidden');
+      }
       continue;
     }
     const box = node.getBoundingClientRect();

@@ -1,6 +1,6 @@
 <div class="project overview-item circle-clip-effect">
     <a href="{{ .Permalink }}">
-        <div class="clip-effect">
+        <div class="clip-effect no-physics physics-hide">
             <div class="teaser-pic" {{ printf "style=\"background-image: url(%s)\"" .Params.image | safeHTMLAttr }}></div>
         </div>
         <div class="columns">
@@ -20,7 +20,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-xs-4 col-xs-offset-2">
+            <div class="col-xs-4 col-xs-offset-2 no-physics">
             </div>
         </div>
         <div class="tags">
