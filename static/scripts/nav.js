@@ -25,7 +25,7 @@
 
   function updateNavVisibility() {
     const secondSectionTop = secondSection.getBoundingClientRect().top;
-    if (secondSectionTop <= 0) {
+    if (secondSectionTop <= 1) {
       nav.classList.remove(navHiddenClass);
     } else {
       nav.classList.add(navHiddenClass);
