@@ -20,7 +20,4 @@
   &.subtle {
     border: 0 none;
   }
-  &:hover .like-link {
-    @extend %link:hover;
-  }
 }
