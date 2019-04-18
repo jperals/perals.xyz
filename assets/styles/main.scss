@@ -22,6 +22,10 @@
 @import './_small_border.scss';
 @import './type.scss';
 
+html {
+  scroll-behavior: smooth;
+}
+
 .main.container {
   .avatar {
     border-radius: 50%;
