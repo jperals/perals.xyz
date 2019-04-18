@@ -121,7 +121,7 @@ function getNNodes({ nodes = [document.body], maxNodes = 10 }) {
       continue;
     }
     const box = node.getBoundingClientRect();
-    const invisible = node.computedStyleMap().get('visibility').value === 'hidden';
+    const invisible = window.getComputedStyle(node).visibility === 'hidden';
     const outOfView = box.top - window.scrollY > documentHeight || box.right - window.scrollX > documentWidth;
     if (invisible || outOfView) {
       continue;
