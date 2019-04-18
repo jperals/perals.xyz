@@ -1,4 +1,5 @@
 @import './_breakpoints.scss';
+@import './_palette';
 @import './_small_border';
 
 section.intro {
@@ -16,6 +17,22 @@ section.intro {
 
 section.intro .calls-to-action {
   margin-top: 5em;
+}
+
+section.intro .call-to-action:hover {
+  border-color: nth($grays, 4) !important;
+
+}
+section.intro .call-to-action:not(.subtle):hover {
+  &:nth-child(1) {
+    background-color: light(nth($palette, 8));
+  }
+  &:nth-child(2) {
+    background-color: light(nth($palette, 7));
+  }
+  &:nth-child(3) {
+    background-color: light(nth($palette, 6));
+  }
 }
 
 .call-to-action.scroll-down .chevron-down {

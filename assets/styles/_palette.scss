@@ -12,7 +12,9 @@ $palette: hsl(193.2, 80%, 82.7%),
           hsl(38.7, 80%, 78%),
           hsl(353.4, 58.2%, 78.4%),
           hsl(251.1, 80%, 87.3%),
-          hsl(130, 80%, 82%);
+          hsl(130, 80%, 82%),
+          hsl(15, 100%, 80%),
+          hsl(200, 100%, 80%);
 
 @function light($color) {
   @return rgba(desaturate($color, 50%), .4);
