@@ -20,19 +20,8 @@ section.intro .calls-to-action {
 }
 
 section.intro .call-to-action:hover {
-  border-color: nth($grays, 4) !important;
-
-}
-section.intro .call-to-action:not(.subtle):hover {
-  &:nth-child(1) {
-    background-color: light(nth($palette, 8));
-  }
-  &:nth-child(2) {
-    background-color: light(nth($palette, 7));
-  }
-  &:nth-child(3) {
-    background-color: light(nth($palette, 6));
-  }
+  background-color: hsl(230, 40%, 95%);
+  border-color: nth($grays, 5) !important;
 }
 
 .call-to-action.scroll-down .chevron-down {
