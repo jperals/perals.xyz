@@ -16,19 +16,29 @@
       return;
     }
     if (nav) {
-      if (secondSection) {
-        updateNavVisibility();
-      }
+      updateNavVisibility();
       updateLinkStates();
     }
   });
 
-  function updateNavVisibility() {
-    const secondSectionTop = secondSection.getBoundingClientRect().top;
-    if (secondSectionTop <= 1) {
-      nav.classList.remove(navHiddenClass);
+  function toggleNavVisibility(shouldBeVisible) {
+    if(shouldBeVisible) {
+        nav.classList.remove(navHiddenClass);
     } else {
-      nav.classList.add(navHiddenClass);
+        nav.classList.add(navHiddenClass);
+    }
+  }
+
+  function updateNavVisibility() {
+    if (secondSection) {
+      const secondSectionTop = secondSection.getBoundingClientRect().top;
+      if (secondSectionTop <= 1) {
+        toggleNavVisibility(true)
+      } else {
+        toggleNavVisibility(false)
+      }
+    } else {
+      toggleNavVisibility(true)
     }
   }
 
@@ -54,9 +64,7 @@
   function updateAll() {
     if (nav) {
       updateLinkStates();
-      if (secondSection) {
-        updateNavVisibility();
-      }
+      updateNavVisibility();
     }
   }
 
