@@ -18,7 +18,7 @@ By generating GeoJSON I can display the data in an interactive map:
 And PNG output can also be useful to easily share highlights about specific regions:
 
 <div>
-    <img alt="Africa" class="enlarge" src="img/map-20190307-1551994567978-504409points.png">
+    <img alt="Linguistic map of Africa" class="enlarge" src="img/map-20190307-1551994567978-504409points.png">
 </div>
 
 <p class="img-comment">
@@ -26,14 +26,14 @@ And PNG output can also be useful to easily share highlights about specific regi
 </p>
 
 <div>
-<img class="enlarge" src="img/map-20190307-1551990717706-504084points.png"/>
+<img alt="Map of the Catalan language" class="enlarge" src="img/map-20190307-1551990717706-504084points.png"/>
 </div>
 <p class="img-comment">
 <em>Catalan</em>: The use of Catalan seems much stronger in Catalonia than in other Catalan-speaking territories like the Balearic Islands or the Valencian Country. The map seems to confirm a specially advanced state of linguistic assimiliation in the latter case.
 </p>
 
 <div>
-<img alt="Europe" class="enlarge" src="img/map-20190307-1551993116891-504273points.png"/>
+<img alt="Linguistic map of Europe" class="enlarge" src="img/map-20190307-1551993116891-504273points.png"/>
 <div>
 <p class="img-comment">
 <em>Europe</em>: Most of the European language areas strongly follow state boundaries, with the notable exception of minoritarian languages like Basque, Catalan, Galician, Norwegian Nynorsk, Welsh... Belgium —which is roughly, but not exactly, split in two halves— is also an interesting case.

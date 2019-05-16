@@ -14,7 +14,7 @@
 {{ end }}
 {{ end }}
 {{ $srcset := delimit ($.Scratch.Get "srcset") "," }}
-<img class="avatar" src="/{{ .Site.Params.avatar }}" {{ printf "srcset=%q" $srcset | safeHTMLAttr }}>
+<img class="avatar" alt="Profile image" src="/{{ .Site.Params.avatar }}" {{ printf "srcset=%q" $srcset | safeHTMLAttr }}>
 {{ end }}
 <div class="markdown">
   {{ .Content }}
