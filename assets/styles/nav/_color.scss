@@ -20,7 +20,7 @@ nav {
         color: nth($grays, 2);
       }
       &.active {
-        border-bottom-color: nth($grays, 2);
+        border-bottom-color: $color-highlight;
       }
     }
   }

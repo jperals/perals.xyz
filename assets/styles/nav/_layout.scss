@@ -45,10 +45,10 @@ nav {
     a:link,
     a:visited {
       &.active {
-        border-bottom-width: 2px;
+        border-bottom-width: 3px;
         border-bottom-style: solid;
         margin-bottom: - 1px;
-        padding-bottom: calc(#{$link_padding} - 1px);
+        padding-bottom: calc(#{$link_padding} - 2px);
       }
     }
   }

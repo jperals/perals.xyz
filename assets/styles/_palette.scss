@@ -16,6 +16,8 @@ $palette: hsl(193.2, 80%, 82.7%),
           hsl(15, 100%, 80%),
           hsl(200, 100%, 80%);
 
+$color-highlight: dodgerblue;
+
 @function light($color) {
   @return rgba(desaturate($color, 50%), .4);
 }
