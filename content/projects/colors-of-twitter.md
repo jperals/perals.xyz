@@ -11,11 +11,7 @@ description: Generating language maps with Twitter data
 
 Basically by combining Twitter feed data (100 million tweets and counting) with a language detector (together with some geometric post-processing, and lots of hours of coding), I was able to offer a quite detailed look at the language geography of the Twitter universe.
 
-By generating GeoJSON I can display the data in an interactive map:
-
-<iframe src="https://jperals.github.io/colors-of-twitter/#embed" width="100%" height="450" frameborder="0"></iframe>
-
-And PNG output can also be useful to easily share highlights about specific regions:
+A PNG image of any region of the world can be generated:
 
 <div>
     <img alt="Linguistic map of Africa" class="enlarge" src="img/map-20190307-1551994567978-504409points.png">
@@ -48,5 +44,9 @@ And PNG output can also be useful to easily share highlights about specific regi
 <p class="img-comment">
 <em>India</em> including English (left) and without including English (right). A Twitter user <a href="https://twitter.com/kr__sunder/status/1089142503406587904">pointed out</a> that Hindi is the preferred lingua franca in Northern India, and English in the South.
 </p>
+
+And finally, it is also possible to generate GeoJSON data which can be visualized with an interactive map:
+
+<iframe src="https://jperals.github.io/colors-of-twitter/#embed" width="100%" height="450" frameborder="0"></iframe>
 
 To know more about this project, see: https://jperals.github.com/colors-of-twitter
