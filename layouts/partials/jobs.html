@@ -1,5 +1,5 @@
 <div class="jobs overview">
-    {{ range where .Data.Pages.Reverse "Section" "jobs" }}
+    {{ range where .Site.Pages.Reverse "Section" "jobs" }}
         {{ partial "job" . }}
     {{ end }}
 </div>
