@@ -1,9 +1,9 @@
-const https = require('http');
+const https = require('https');
 const fs = require('fs');
 
 const options = {
   hostname: 'nerdlog.herokuapp.com',
-  port: 80,
+  port: 443,
   path: '/api/learnings/',
   method: 'GET'
 };
