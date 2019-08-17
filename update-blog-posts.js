@@ -27,10 +27,26 @@ req.on('error', function(e) {
 function writeBlogPosts(postsData) {
     createPostsDirectoryIfItDoesntExist()
     .then(() => {
-        postsData.forEach((postData) => {
-            writeBlogPost(postData)
-        })        
+        let completed = 0
+        const total = postsData.length
+        reportProgress(completed, total)
+        return Promise.all(postsData.map((postData) => {
+            return writeBlogPost(postData).then(() => {
+                completed += 1
+                reportProgress(completed, total)
+            })
+        }))
     })
+    .then(() => {
+        console.log('\nDone!')
+    })
+    .catch(console.error)
+}
+
+function reportProgress(completed, total) {
+    process.stdout.clearLine()
+    process.stdout.cursorTo(0)
+    process.stdout.write(`Fetching posts... ${completed}/${total}`)
 }
 
 function createPostsDirectoryIfItDoesntExist() {
@@ -57,9 +73,11 @@ function createDirectoryIfItDoesntExist(dir) {
 }
 
 function writeBlogPost(postData) {
-    return fs.writeFile('./content/posts/' + postData.id + '.md', generatePostMarkdownFileContent(postData), (err) => {
-        if (err) throw err;
-        console.log('The file has been saved!');
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./content/posts/' + postData.id + '.md', generatePostMarkdownFileContent(postData), (err) => {
+            if (err) reject(err);
+            else resolve()
+        })
       })
 }
 
