@@ -82,12 +82,23 @@ function writeBlogPost(postData) {
 }
 
 function generatePostMarkdownFileContent(postData) {
-    return `
----
-title: "${postData.learning_title}"
+    const titleRaw = postData.learning_title || postData.learning_text.slice(0, 100)
+    const title = escapeYaml(titleRaw)
+    return `---
+title: "${sanitizePostTitle(title)}"
 draft: false
+date: ${postData.modified_date}
+publishdate: ${postData.modified_date}
 tags: [ ${postData.tags.map(tagObject => '"' + tagObject.name + '"').join(', ')} ]
 ---
 ${postData.learning_text}
     `
+}
+
+function escapeYaml(str) {
+    return str.replace('"', '\"')
+}
+
+function sanitizePostTitle(str) {
+    return str.split(/\n|\r/)[0]
 }
