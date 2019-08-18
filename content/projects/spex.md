@@ -34,4 +34,6 @@ The story view allows designers to create a user story for the design idea, as a
 </p>
 <p>&nbsp;</p>
 
+Demo (without write permissions): https://try-spex.firebaseapp.com
+
 Code: https://github.com/jperals/spex
