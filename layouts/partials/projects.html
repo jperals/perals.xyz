@@ -5,7 +5,9 @@
 <div class="overview">
 
     {{ range sort (where .Site.Pages "Section" "projects") "Params.year" "desc" }}
+     {{ if .Params.year }}
      {{ partial "project" . }}
+     {{ end }}
     {{ end }}
 
 </div>

@@ -1,0 +1,30 @@
+{{ partial "header.html" . }}
+<main class="wrapper main">
+    <section class="main list">
+        <div class="container">
+            <header>
+                <h1>{{.Title}}</h1>
+            </header>
+            <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
+            <div class="content copy-text">
+                {{.Content}}
+            </div>
+            <ul class="content">
+            <!-- Ranges through content/posts/*.md -->
+            {{ range .Pages }}
+                <li>
+                    {{ if .Date }}
+                    <div class="date">{{.Date.Format "2006-01-02"}}</div>
+                    {{ end }}
+                    {{ if .Params.Year }}
+                    <div class="date">{{.Params.Year}}</div>
+                    {{ end }}
+                    <a href="{{.Permalink}}">{{.Title}}</a>
+                </li>
+            {{ end }}
+            </ul>
+        </div>
+    </section>
+</main>
+{{ partial "nav.html" . }}
+{{ partial "footer.html" . }}

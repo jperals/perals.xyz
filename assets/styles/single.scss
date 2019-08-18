@@ -1,3 +1,5 @@
+@import './palette';
+
 .main.single {
   padding: 0 0 4em;
   .content + * {
@@ -6,8 +8,20 @@
   h1 {
     margin-bottom: 10px;
   }
-  .meta.year {
+  .meta.date {
     font-size: 22px;
     margin-bottom: 38px;
+  }
+  code {
+    border-radius: .25rem;
+    padding: .25em;
+    background-color: nth($grays, 8);
+  }
+  pre code {
+    padding: .75em;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: scroll;
   }
 }

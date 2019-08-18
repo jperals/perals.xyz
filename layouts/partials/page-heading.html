@@ -6,7 +6,10 @@
     {{ .Title }}
     {{ end }}
   </h1>
+  {{ if .Date }}
+  <div class="meta date">{{.Date.Format "2006-01-02"}}</div>
+  {{ end }}
   {{ if .Params.year }}
-  <div class="meta year">{{ .Params.year }}</div>
+  <div class="meta date year">{{ .Params.year }}</div>
   {{ end }}
 </div>

@@ -1,36 +1,19 @@
-<nav class="hidden">
+{{ $currentPage := . }}
+<nav class="{{ if eq $currentPage.URL '/' }}hidden{{ end }}">
     <div class="container">
         <ul class="section-links">
             <li>
                 <a href="/#" title="Back to the top">
-                  <i class="fas fa-chevron-up"></i>
+                    <i class="fas fa-chevron-up"></i>
                 </a>
             </li>
+            {{ range .Site.Menus.main.ByWeight }}
             <li>
-                <a href="/#technical-skills" class="technical-skills-link">
-                    Toolbox
+                <a href="{{ .URL }}" class="{{ if hasPrefix $currentPage.URL .URL }}active{{ end }}">
+                    {{.Name}}
                 </a>
             </li>
-            <li>
-                <a href="/#projects">
-                    Projects
-                </a>
-            </li>
-            <li>
-                <a href="/#professional-experience">
-                    Professional experience
-                </a>
-            </li>
-            <li>
-                <a href="/#contact">
-                    Contact
-                </a>
-            </li>
-            <li>
-                <a href="{{ .Site.Params.cv_url }}">
-                    CV
-                </a>
-            </li>
+            {{ end }}
         </ul>
     </div>
 </nav>

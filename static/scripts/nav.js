@@ -8,10 +8,14 @@
 
   window.addEventListener('DOMContentLoaded', function () {
     retrieveElements();
-    updateAll();
+    if(secondSection) {
+      updateAll();
+      reactToScroll();
+    }
   });
 
-  window.addEventListener('scroll', function () {
+  function reactToScroll() {
+    window.addEventListener('scroll', function () {
     if (document.body.classList.contains('with-gravity')) {
       return;
     }
@@ -20,6 +24,7 @@
       updateLinkStates();
     }
   });
+}
 
   function toggleNavVisibility(shouldBeVisible) {
     if(shouldBeVisible) {

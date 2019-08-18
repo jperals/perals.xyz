@@ -1,0 +1,37 @@
+@import '../palette';
+
+.content li {
+  margin-left: 1em;
+  &:before {
+    content: '- ';
+    display: inline-block;
+    margin-left: -1em;
+    width: 1em;
+  }
+}
+
+.main.list {
+    list-style: none;
+    li {
+        &:before {
+            display: none;
+        }
+        margin-left: 0;
+    }
+}
+
+.main.list {
+    padding-bottom: 1em;
+}
+
+.main.list li {
+    margin-bottom: 1em;
+}
+
+.main.list li .date {
+    color: nth($grays, 5);
+}
+
+.content.copy-text + ul {
+    margin-top: 2.5em;
+}

@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-<div class="wrapper main">
+<main class="wrapper main">
     <section class="main single" id="projects">
         <div class="container main">
             <div class="content">
@@ -9,12 +9,12 @@
                 </div>
             </div>
             <div class="right">
-                <a class="button back-button subtle-button" {{ printf "href=%q" ("/#projects" | relLangURL) | safeHTMLAttr }}>
+                <a class="button back-button subtle-button" href="../">
                 Back
                 </a>
             </div>
         </div>
     </section>
-</div>
+</main>
 {{ partial "nav.html" . }}
 {{ partial "footer.html" . }}
