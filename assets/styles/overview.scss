@@ -5,7 +5,10 @@
 .overview-item {
   position: relative;
   h3 {
+    border-bottom: 1px solid transparent;
     margin-bottom: .2em;
+    padding-bottom: .1em;
+    display: inline-block;
   }
   .lead {
     color: nth($grays, 5);
@@ -55,9 +58,7 @@
 
 .overview-item {
   a:hover h3 {
-    border-bottom: 1px solid nth($grays, 2);
-    display: inline-block;
-    margin-bottom: calc(.2em - 1px);
+    border-color: white;
   }
 }
 
