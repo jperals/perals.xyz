@@ -1,0 +1,10 @@
+@import '../palette';
+
+img.enlarge {
+    transition: box-shadow .3s, transform .3s;
+}
+
+img.enlarge:hover {
+    box-shadow: 0 0 18px -5px $color-highlight;
+    transform: scale(1.005);
+}
