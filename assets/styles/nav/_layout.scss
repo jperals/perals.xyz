@@ -55,6 +55,12 @@ nav {
   visibility: hidden;
 }
 
+@media (max-width: $breakpoint_wide - 1px) {
+  nav {
+    display: none;
+  }
+}
+
 @media (min-width: $breakpoint_wide) {
   nav {
     opacity: 0;
