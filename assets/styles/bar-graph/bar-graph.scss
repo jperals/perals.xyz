@@ -1,24 +1,23 @@
 @import '../colors';
 @import '../layout';
+@import '../palette';
 @import '../variables';
 
 .tags {
-  .tag, .experience-time {
-    font-size: 14px;
-    color: #999 !important;
-    padding: .3em .6em .35em .6em;
-  }
   li {
     position: relative;
   }
-  .tag {
-    background-color: nth($grays, 7) !important;
-    border-radius: 5px;
-    color: nth($grays, 3) !important;
-  }
   .technologies-stats {
     text-align: right;
+    .experience-time {
+      @extend .tag;
+    }
+    .tag,
+    .experience-time {
+      color: $color-highlight-dark !important;
+    }
     .tag {
+      background-color: $color-highlight-lighter !important;
       display: inline-block;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;

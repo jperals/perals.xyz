@@ -24,8 +24,8 @@ a.button.subtle-button:link {
   background-color: rgb(240, 240, 240);
   color: nth($grays, 3);
   &:hover {
-    background-color: rgb(220, 220, 220);
-    color: nth($grays, 2);
+    background-color: $color-highlight-light;
+    color: $color-highlight-dark;
   }
   &.back-button {
     padding: .3em .6em .3em 0;

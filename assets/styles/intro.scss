@@ -20,8 +20,9 @@ section.intro .calls-to-action {
 }
 
 section.intro .call-to-action:hover {
-  background-color: hsl(230, 40%, 95%);
-  border-color: nth($grays, 5) !important;
+  background-color: $color-highlight-lighter;
+  border-color: $color-highlight-dark !important;
+  color: $color-highlight-dark;
 }
 
 .call-to-action.scroll-down .chevron-down {

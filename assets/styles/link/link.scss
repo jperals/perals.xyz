@@ -1,14 +1,18 @@
 @import './read-more-link';
 @import '../palette';
 
-%link:hover,
-%link:link,
-%link:visited {
+%link {
   color: inherit;
   border-bottom-color: nth($grays, 5);
-  &:hover {
-    border-bottom-color: nth($grays, 2);
-  }
+}
+
+p %link {
+  color: nth($grays, 2);
+}
+
+%link:hover {
+  color: $color-highlight-dark;
+  border-bottom-color: $color-highlight-dark;
 }
 
 %link,
