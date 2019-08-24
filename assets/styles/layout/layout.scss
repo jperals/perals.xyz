@@ -1,6 +1,6 @@
-@import './_breakpoints';
-@import './_colors';
-@import './_variables.scss';
+@import '../_breakpoints';
+@import '../_colors';
+@import './vars';
 
 body {
   margin: 0;
@@ -55,16 +55,15 @@ section > .graph {
 }
 
 @media (max-width: $breakpoint_wide - 1px) {
-  $space-around: 34px;
   section {
-    padding-bottom: $space-around;
+    padding-bottom: $space-around-container;
   }
   .container {
-    padding-left: $space-around;
-    padding-right: $space-around;
+    padding-left: $space-around-container;
+    padding-right: $space-around-container;
     &:before {
-      margin-left: - $space-around;
-      width: calc(100% + #{2*$space-around});
+      margin-left: - $space-around-container;
+      width: calc(100% + #{2*$space-around-container});
     }
   }
 }
