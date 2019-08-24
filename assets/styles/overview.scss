@@ -58,7 +58,8 @@
   }
   .heading h3,
   .heading .lead,
-  .content {
+  .content,
+  p {
     color: white !important;
   }
   // Add some shadow to the texts to make them more legible
@@ -108,7 +109,8 @@
       }
       .heading h3,
       .heading .lead,
-      .content {
+      .content,
+      p {
         color: nth($grays, 3) !important;
       }
       .columns {
