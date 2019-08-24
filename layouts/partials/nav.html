@@ -1,5 +1,5 @@
 {{ $currentPage := . }}
-<nav class="{{ if eq $currentPage.URL '/' }}hidden{{ end }}">
+<nav class="{{ if eq $currentPage.RelPermalink '/' }}hidden{{ end }}">
     <div class="container">
         {{ if .Site.Params.site_name }}
         <a class="nav-sm site-name" href="/">
@@ -17,7 +17,7 @@
             </li>
             {{ range .Site.Menus.main.ByWeight }}
             <li>
-                <a href="{{ .URL }}" class="{{ if hasPrefix $currentPage.URL .URL }}active{{ end }}">
+                <a href="{{ .URL }}" {{ if or (hasPrefix $currentPage.RelPermalink .URL) (hasPrefix $currentPage.RelPermalink .Identifier) }}class="active"{{ end }}>
                     {{.Name}}
                 </a>
             </li>
