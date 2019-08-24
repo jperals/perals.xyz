@@ -1,10 +1,18 @@
 {{ $currentPage := . }}
 <nav class="{{ if eq $currentPage.URL '/' }}hidden{{ end }}">
     <div class="container">
+        {{ if .Site.Params.site_name }}
+        <a class="nav-sm site-name" href="/">
+            {{ .Site.Params.site_name }}
+        </a>
+        {{ end }}
+        <a class="nav-sm menu-link">
+            <i class="fas fa-bars"></i>
+        </a>
         <ul class="section-links">
             <li>
-                <a href="/#" title="Back to the top">
-                    <i class="fas fa-chevron-up"></i>
+                <a href="/#intro" title="Home">
+                    <i class="fas fa-home"></i>
                 </a>
             </li>
             {{ range .Site.Menus.main.ByWeight }}

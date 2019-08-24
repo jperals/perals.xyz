@@ -1,3 +1,7 @@
+@import '../breakpoints';
+@import '../palette';
+@import './vars';
+
 nav {
   a,
   a:link,
@@ -5,5 +9,39 @@ nav {
   a:hover {
     border-bottom: 0 none;
     text-decoration: none;
+  }
+}
+
+@media (max-width: $breakpoint-mid - 1px) {
+  nav li {
+    a,
+    a:hover,
+    a:link,
+    a:visited {
+      display: block;
+      border-left-width: 5px;
+      border-left-style: solid;
+      border-left-color: transparent;
+      &.active {
+        border-left-color: $color-highlight;
+      }
+    }
+  }
+}
+
+
+@media (min-width: $breakpoint-mid) {
+  nav li {
+    a,
+    a:hover,
+    a:link,
+    a:visited {
+      &.active {
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
+        margin-bottom: - 1px;
+        padding-bottom: calc(#{$link_padding} - 2px);
+      }
+    }
   }
 }

@@ -8,6 +8,7 @@
 
   window.addEventListener('DOMContentLoaded', function () {
     retrieveElements();
+    reactToMenuLink();
     if(secondSection) {
       updateAll();
       reactToScroll();
@@ -52,6 +53,9 @@
     if (nav) {
       nav.querySelectorAll('a').forEach(link => {
         let id = link.getAttribute('href');
+        if (typeof id !== 'string') {
+          return;
+        }
         if (id.startsWith('/')) {
           id = id.slice(1);
         }
@@ -99,5 +103,14 @@
         }
       }
     }
+  }
+  function reactToMenuLink() {
+    const menuLink = document.querySelector('.menu-link');
+    menuLink.addEventListener('click', toggleMenu);
+    menuLink.addEventListener('tap', toggleMenu);
+  }
+  
+  function toggleMenu() {
+    nav.classList.toggle('open');
   }
 })();
