@@ -3,6 +3,14 @@
 nav {
   background-color: white;
   border-bottom-color: nth($grays, 6);
+  .site-name {
+    color: nth($grays, 4);
+  }
+  .hamburger-button,
+  .hamburger-button:before,
+  .hamburger-button:after {
+    border-color: nth($grays, 4);
+  }
   .pseudo-avatar {
     $color1: rgb(204, 186, 212);
     $color2: rgb(224, 201, 242);
