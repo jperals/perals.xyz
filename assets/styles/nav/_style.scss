@@ -19,9 +19,9 @@ nav {
     a:link,
     a:visited {
       display: block;
-      border-left-width: 5px;
-      border-left-style: solid;
-      border-left-color: transparent;
+      border-width: 0 5px;
+      border-style: solid;
+      border-color: transparent;
       &.active {
         border-left-color: $color-highlight;
       }
