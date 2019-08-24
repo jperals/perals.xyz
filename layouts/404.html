@@ -1,9 +1,12 @@
-
-Not found
-{{ define "main"}}
-    <main id="main">
-      <div>
-       <h1 id="title"><a href="{{ "/" | relURL }}">Go Home</a></h1>
-      </div>
-    </main>
-{{ end }}
+{{ partial "header.html" . }}
+<main class="wrapper main">
+    <div class="container">
+        <section>
+          <h1 id="title">Not Found</h1>
+          <p>Sorry, there is nothing at this location.</p>
+          <a href="{{ "/" | relURL }}">Go to the Homepage?</a>
+        </section>
+    </div>
+</main>
+{{ partial "nav.html" . }}
+{{ partial "footer.html" . }}
