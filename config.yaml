@@ -30,16 +30,17 @@ menu:
     weight: 3
   - identifier: contact
     name: Contact
-    title: Contace
+    title: Contact
     url: /#contact
     weight: 4
+  secondary:
   - identifier: blog
     name: Blog
     title: Blog
     url: /posts/
-    weight: 5
+    weight: 1
   - identifier: cv
     name: CV
     title: CV
     url: /cv-joanperals-2019.05.03_01.pdf
-    weight: 6
+    weight: 2

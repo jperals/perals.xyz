@@ -27,6 +27,10 @@ nav {
       }
     }
   }
+  nav .section-links li.separator {
+    height: 0;
+    border-top: 1px solid nth($grays, 7);
+  }
 }
 
 
@@ -43,5 +47,13 @@ nav {
         padding-bottom: calc(#{$link_padding} - 2px);
       }
     }
+  }
+  nav .section-links .separator {
+    height: 100%;
+    display: block;
+    padding-top: $link_padding;
+    padding-bottom: $link_padding;
+    background-color: nth($grays, 7);
+    width: 1px;
   }
 }

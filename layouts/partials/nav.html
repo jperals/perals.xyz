@@ -16,7 +16,15 @@
                 </a>
             </li>
             {{ range .Site.Menus.main.ByWeight }}
-            <li>
+            <li class="primary">
+                <a href="{{ .URL }}" {{ if or (hasPrefix $currentPage.RelPermalink .URL) (hasPrefix $currentPage.RelPermalink .Identifier) }}class="active"{{ end }}>
+                    {{.Name}}
+                </a>
+            </li>
+            {{ end }}
+            <li class="separator">&nbsp;</li>
+            {{ range .Site.Menus.secondary.ByWeight }}
+            <li class="secondary">
                 <a href="{{ .URL }}" {{ if or (hasPrefix $currentPage.RelPermalink .URL) (hasPrefix $currentPage.RelPermalink .Identifier) }}class="active"{{ end }}>
                     {{.Name}}
                 </a>
