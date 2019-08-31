@@ -18,4 +18,13 @@ footer {
   .license {
     color: nth($grays, 4);
   }
+  .two-sides-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    & > *:first-child {
+      flex-grow: 1;
+      display: block;
+    }
+  }
 }
