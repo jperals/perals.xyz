@@ -6,6 +6,6 @@ draft: false
 
 > Hi, I'm Joan.
 
-> A Berlin-based UX Engineer.
+> A UX Engineer based in Berlin, Germany.
 
 > I have a mixed background in computer science and visual arts and more than 10 years of professional experience in making web-based prototypes and applications.
