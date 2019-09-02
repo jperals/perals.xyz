@@ -1,9 +1,9 @@
 <div class="page-heading">
   <h1>
     {{ if .Params.heading }}
-    {{ .Params.heading }}
+    {{ .Params.heading | markdownify }}
     {{ else }}
-    {{ .Title }}
+    {{ .Title | markdownify }}
     {{ end }}
   </h1>
   {{ if .Date }}

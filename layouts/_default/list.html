@@ -19,7 +19,7 @@
                     {{ if .Params.Year }}
                     <div class="date">{{.Params.Year}}</div>
                     {{ end }}
-                    <a href="{{.Permalink}}">{{.Title}}</a>
+                    <a href="{{.Permalink}}">{{.Title | markdownify}}</a>
                 </li>
             {{ end }}
             </ul>
