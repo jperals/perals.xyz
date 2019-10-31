@@ -37,6 +37,7 @@ function writeBlogPosts(postsData) {
       reportProgress(completed, total)
       return Promise.all(postsData.map((postData) => {
           return writeBlogPost({
+              canonicalUrl: postData.canonical_url,
               createdDate: postData.published_at,
               modifiedDate: postData.published_at,
               path: postData.slug,

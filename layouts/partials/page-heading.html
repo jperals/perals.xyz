@@ -12,4 +12,10 @@
   {{ if .Params.year }}
   <div class="meta date year">{{ .Params.year }}</div>
   {{ end }}
+  {{ if .Params.canonical_url }}
+  <div class="meta original-published-line">
+    <span class="original-published-line-text">Originally published at </span>
+    <a href="{{ .Params.canonical_url }}">{{ .Params.canonical_url }}</a>
+  </div>
+  {{ end }}
 </div>

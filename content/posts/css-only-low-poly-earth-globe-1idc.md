@@ -4,6 +4,7 @@ draft: false
 date: 2019-10-12T21:42:15.626Z
 publishdate: 2019-10-12T21:42:15.626Z
 tags: [ ]
+canonical_url: https://dev.to/jperals/css-only-low-poly-earth-globe-1idc
 ---
 CSS-only Earth Globe experiment on CodePen: https://codepen.io/jperals/pen/ExYqwyJ
 

@@ -4,6 +4,7 @@ draft: false
 date: 2019-10-23T22:20:11.041Z
 publishdate: 2019-10-23T22:20:11.041Z
 tags: [ ]
+canonical_url: https://dev.to/jperals/file-naming-kebab-case-or-camelcase-gga
 ---
 When it comes to name files and directories, kebab-case should have the following advantages over camelCase:
 
