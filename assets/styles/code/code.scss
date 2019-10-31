@@ -1,0 +1,23 @@
+@import './palette';
+
+code {
+    border-radius: .25em;
+    padding: .25em;
+    color: nth($purples, 1);
+    background-color: nth($purples, 4);
+    font-size: 1.25em;
+}
+pre code {
+    padding: .75em;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: scroll;
+    font-size: 1.5em;
+}
+h1 code {
+    background-color: transparent;
+    color: nth($purples, 2);
+    font-weight: bold;
+    padding: 0;
+}

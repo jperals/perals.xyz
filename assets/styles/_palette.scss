@@ -16,6 +16,11 @@ $palette: hsl(193.2, 80%, 82.7%),
           hsl(15, 100%, 80%),
           hsl(200, 100%, 80%);
 
+$purples: hsl(280, 10%, 60),
+          hsl(280, 13%, 70%),
+          hsl(280, 10%, 92%),
+          hsla(280, 10%, 50%, .10);
+
 $color-highlight: dodgerblue;
 $color-highlight-dark: scale-color($color-highlight, $lightness: -50%, $saturation: 40%);
 $color-highlight-light: scale-color($color-highlight, $lightness: 75%, $saturation: -20%);

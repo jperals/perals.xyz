@@ -3,16 +3,20 @@
 
 %link {
   color: inherit;
-  border-bottom-color: nth($grays, 5);
+  border-bottom-color: $color-highlight;
 }
 
 p %link {
   color: nth($grays, 2);
 }
 
-%link:hover {
+%link:hover,
+%link:hover code {
   color: $color-highlight-dark;
-  border-bottom-color: $color-highlight-dark;
+}
+
+%link:hover {
+  border-bottom-color: $color-highlight;
 }
 
 %link,
