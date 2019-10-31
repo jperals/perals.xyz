@@ -2,7 +2,7 @@ const fs = require('fs');
 
 function writeBlogPost(postData) {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./content/posts/' + postData.id + '.md', generatePostMarkdownFileContent(postData), (err) => {
+        fs.writeFile('./content/posts/' + postData.path + '.md', generatePostMarkdownFileContent(postData), (err) => {
             if (err) reject(err);
             else resolve()
         })
@@ -10,16 +10,16 @@ function writeBlogPost(postData) {
 }
 
 function generatePostMarkdownFileContent(postData) {
-    const titleRaw = postData.learning_title || postData.learning_text.slice(0, 100)
+    const titleRaw = postData.title || postData.text.slice(0, 100)
     const title = escapeYaml(titleRaw)
     return `---
 title: "${sanitizePostTitle(title)}"
 draft: false
-date: ${postData.modified_date}
-publishdate: ${postData.modified_date}
-tags: [ ${postData.tags.map(tagObject => '"' + tagObject.name + '"').join(', ')} ]
+date: ${postData.modifiedDate}
+publishdate: ${postData.modifiedDate}
+tags: [${postData.tags && postData.tags.length ? ' ' + postData.tags.map(tagObject => '"' + tagObject.name + '"').join(', ') + ' ' : ''} ]
 ---
-${postData.learning_text}
+${postData.text}
     `
 }
 

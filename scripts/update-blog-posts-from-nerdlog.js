@@ -31,7 +31,14 @@ function writeBlogPosts(postsData) {
         const total = postsData.length
         reportProgress(completed, total)
         return Promise.all(postsData.map((postData) => {
-            return writeBlogPost(postData).then(() => {
+            return writeBlogPost({
+                createdDate: postData.created_date,
+                modifiedDate: postData.modified_date,
+                path: postData.id,
+                tags: postData.tags,
+                text: postData.learning_text,
+                title: postData.learning_title
+            }).then(() => {
                 completed += 1
                 reportProgress(completed, total)
             })
