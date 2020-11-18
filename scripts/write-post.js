@@ -17,7 +17,7 @@ title: "${sanitizePostTitle(title)}"
 draft: false
 date: ${postData.modifiedDate}
 publishdate: ${postData.modifiedDate}
-tags: [${postData.tags && postData.tags.length ? ' ' + postData.tags.map(tagObject => '"' + tagObject.name + '"').join(', ') + ' ' : ''} ]
+tags: [${postData.tags && postData.tags.length ? ' ' + postData.tags.map(tagObject => '"' + tagObject.name + '"').join(', ') + ' ' : ' '}]
 ${postData.canonicalUrl ? 'canonical_url: ' + postData.canonicalUrl + '\n' : ''}---
 ${postData.text}
     `
