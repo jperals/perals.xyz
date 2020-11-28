@@ -2,9 +2,9 @@
 title: "ZeroDivs"
 year: 2020
 draft: false
-excerpt: UI editor for single-element CSS illustrations
+excerpt: A UI editor for creating single-element CSS illustrations
 link: https://zerodivs.com
-tags: [css, Vue.js]
+tags: [CSS, Vue.js]
 image: "img/zerodivs.png"
 description: UI editor for single-element CSS illustrations
 ---
