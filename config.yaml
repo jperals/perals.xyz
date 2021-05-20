@@ -34,11 +34,6 @@ menu:
     title: Blog
     url: /posts/
     weight: 1
-  - identifier: cv
-    name: CV
-    title: CV
-    url: /cv-joanperals-2019.05.03_01.pdf
-    weight: 2
 
 markup:
   goldmark:
