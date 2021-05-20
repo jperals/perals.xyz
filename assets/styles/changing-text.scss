@@ -1,7 +1,18 @@
-[data-changingtext] {
-  transition: opacity .5s;
+[data-changingtext] > span {
+  transition: opacity 0s;
 }
 
-.changing-text {
+.changing-text > span {
   opacity: 0;
+}
+
+$n: 21;
+
+@for $i from 1 through $n {
+  [data-changingtext]:not(.changing-text) > span:nth-child(#{$i}) {
+    transition-delay: #{$i*3}00ms;
+  }
+  .changing-text > span:nth-child(#{$i}) {
+    transition-delay: #{($n - $i)*3}00ms;
+  }
 }

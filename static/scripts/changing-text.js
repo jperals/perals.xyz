@@ -4,10 +4,13 @@ for (const el of elements) {
   let index = 0;
   setInterval(function() {
     el.classList.add('changing-text');
+    const newText = alternativeTexts[index];
     setTimeout(function() {
-      el.innerHTML = alternativeTexts[index];
-      el.classList.remove('changing-text');
-    }, 500);
+      el.innerHTML = newText.split('').map(char => `<span>${char}</span>`).join('');
+      setTimeout(() => {
+        el.classList.remove('changing-text');
+      }, 100);
+    }, 1000);
     index ++;
     index = index % alternativeTexts.length;
   },
