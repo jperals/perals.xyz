@@ -20,6 +20,7 @@
                     <div class="date">{{.Params.Year}}</div>
                     {{ end }}
                     <a href="{{.Permalink}}">{{.Title | markdownify}}</a>
+                    <p>{{.Summary}} <a class="button" href="{{.Permalink}}">Read more</a></p>
                 </li>
             {{ end }}
             </ul>

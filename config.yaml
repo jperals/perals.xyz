@@ -44,3 +44,5 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+summaryLength: 20
