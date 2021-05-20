@@ -1,18 +1,20 @@
 const elements = document.querySelectorAll('[data-changingtext]');
 for (const el of elements) {
   const alternativeTexts = el.getAttribute('data-changingtext').split(',');
-  let index = 0;
+  const alternativeElements = alternativeTexts.map(text => text.split('').map(char => `<span>${char}</span>`).join(''))
+  let index = 1;
+  el.innerHTML = alternativeElements[0];
   setInterval(function() {
+    index = index % alternativeElements.length;
     el.classList.add('changing-text');
-    const newText = alternativeTexts[index];
+    const nextElement = alternativeElements[index];
     setTimeout(function() {
-      el.innerHTML = newText.split('').map(char => `<span>${char}</span>`).join('');
+      el.innerHTML = nextElement;
       setTimeout(() => {
         el.classList.remove('changing-text');
       }, 100);
     }, 1000);
     index ++;
-    index = index % alternativeTexts.length;
   },
-  3000);
+  5000);
 }
