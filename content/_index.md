@@ -8,4 +8,4 @@ draft: false
 
 > ### A <span data-changingtext="UX Engineer,Frontend Developer,Creative Technologist">UX Engineer</span><br/>based in Berlin, Germany.
 
-> I have a mixed background in computer science and visual arts and more than 12 years of professional experience in developing applications with a focus on the User Experience.
+> I have a mixed background in computer science and visual arts and more than 12 years of professional experience in developing applications with a strong focus on the User Experience.
