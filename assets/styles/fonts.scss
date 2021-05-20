@@ -33,12 +33,12 @@ section
   font-family: $body-font-stack;
 }
 
-h1 {
-  font-family: $special-font-stack-1;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font-stack;
+}
+
+h1 {
+  font-family: $special-font-stack-1;
 }
 
 h3 {

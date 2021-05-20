@@ -31,7 +31,7 @@ section.intro p {
 }
 
 section.intro .calls-to-action {
-  margin-top: 4em;
+  margin-top: 5.5em;
 }
 
 section.intro .call-to-action:hover {
@@ -41,7 +41,7 @@ section.intro .call-to-action:hover {
 }
 
 .call-to-action.scroll-down .chevron-down {
-  margin-top: 1em;
+  margin-top: 0.5em;
   animation: bounce-vertical 1s ease-in-out infinite;
 }
 
@@ -49,10 +49,6 @@ section.intro .call-to-action:hover {
   section.intro {
     .avatar {
       margin-bottom: 20px;
-    }
-    blockquote {
-      margin-left: 40px;
-      margin-right: 4 0px;
     }
   }
 }
@@ -76,8 +72,12 @@ section.intro .call-to-action:hover {
     display: flex;
     align-items: center;
     .avatar {
-      margin-right: 6%;
+      margin-right: 10%;
       max-width: 170px;
+    }
+    blockquote {
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }
