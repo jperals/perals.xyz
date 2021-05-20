@@ -11,5 +11,5 @@ for (const el of elements) {
     index ++;
     index = index % alternativeTexts.length;
   },
-  5000);
+  3000);
 }
