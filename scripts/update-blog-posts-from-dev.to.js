@@ -4,7 +4,8 @@ const { createPostsDirectoryIfItDoesntExist, reportProgress, writeBlogPost } = r
 
 const options = {
     headers: {
-      'api-key': settings.devToKey
+      'api-key': settings.devToKey,
+      'User-Agent': 'Node HTTPS'
     },
     hostname: 'dev.to',
     method: 'GET',
