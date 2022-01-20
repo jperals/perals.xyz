@@ -1,7 +1,6 @@
 ---
 title: "Design and Development"
 date: 2018-07-20T11:04:31+02:00
-draft: true
 ---
 
 A lot is being written these days about the relationship between design and development and how our workflows can be improved. For quite some time we have been trying to "bridge the gap" between design phase and development phase with automated tools. But maybe we have been overrating the static design mockup as a _source of truth_.
