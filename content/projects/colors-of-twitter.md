@@ -49,4 +49,4 @@ And finally, it is also possible to generate GeoJSON data which can be visualize
 
 <iframe src="https://jperals.github.io/colors-of-twitter/#embed" width="100%" height="450" frameborder="0"></iframe>
 
-To know more about this project, see: https://jperals.github.com/colors-of-twitter
+To know more about this project, see: https://jperals.github.io/colors-of-twitter
