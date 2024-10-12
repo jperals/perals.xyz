@@ -7,8 +7,8 @@ params:
     description: "Berlin-based web developer and creative technologist with 10 years of professional experience."
     avatar: "img/profile-color-transparent-bg.png"
     cv_url: "/cv-joanperals-2019.05.03_01.pdf"
-    site_name: "perals.io"
-    projects_url: "https://perals.io"
+    site_name: "perals.xyz"
+    projects_url: "https://perals.xyz"
     linkedin_url: "https://linkedin.com/in/joanperalstresserra"
 
 menu:

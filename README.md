@@ -1,4 +1,4 @@
-# perals.io
+# perals.xyz
 
 A Hugo-based static site.
 
