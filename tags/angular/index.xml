@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angular on Joan Perals — UX Developer</title>
+    <link>/tags/angular/</link>
+    <description>Recent content in Angular on Joan Perals — UX Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/jobs/2012-2019-ixds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jobs/2012-2019-ixds/</guid>
+      <description>More than 7 years developing high fidelity prototypes for clients big and small, uncluding Siemens, Bosch, Deutsche Telekom, and leading companies in the German automotive industry, with a strong focus on a user-centric design process.</description>
+    </item>
+    
+    <item>
+      <title>Doodlescript</title>
+      <link>/projects/doodlescript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/doodlescript/</guid>
+      <description>How would computer programming look like if we could reinvent it now from the ground up?
+With this project I wanted to radically question the way we program.</description>
+    </item>
+    
+  </channel>
+</rss>

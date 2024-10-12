@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jobs on Joan Perals — UX Developer</title>
+    <link>/jobs/</link>
+    <description>Recent content in Jobs on Joan Perals — UX Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/jobs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/jobs/2008-2009-freelancing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jobs/2008-2009-freelancing/</guid>
+      <description>My first paid work as a developer was a WordPress-based website for a startup. I took care of both design and development and wrote a custom theme from scratch.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jobs/2009-2010-abaden/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jobs/2009-2010-abaden/</guid>
+      <description>I developed various web-based and desktop applications for a dental clinic team to improve their workflows in their daily tasks.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jobs/2010-2010-linka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jobs/2010-2010-linka/</guid>
+      <description>Basically, I took care of the implementation of page layouts according to PSD-based documents for various clients. Also some minor photo editing.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jobs/2010-2012-cm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jobs/2010-2012-cm/</guid>
+      <description>One of my main tasks at Content Mind was to take care of the visual layer of a Plone-based health information portal.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jobs/2012-2019-ixds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jobs/2012-2019-ixds/</guid>
+      <description>More than 7 years developing high fidelity prototypes for clients big and small, uncluding Siemens, Bosch, Deutsche Telekom, and leading companies in the German automotive industry, with a strong focus on a user-centric design process.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jobs/2019-nbt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jobs/2019-nbt/</guid>
+      <description>As a startup incubator, Next Big Thing brought me the chance to get involved in a variety of innovative projects across the whole development cycle —shaping products from the earliest prototyping phases all the way to production.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jobs/2020-amazon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jobs/2020-amazon/</guid>
+      <description>At AWS, a Frontend Engineer&amp;rsquo;s job goes well beyond frontend &amp;ndash;and also can have a big impact on many, very real customers who might have very different use cases.</description>
+    </item>
+    
+  </channel>
+</rss>

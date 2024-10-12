@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Django on Joan Perals — UX Developer</title>
+    <link>/tags/django/</link>
+    <description>Recent content in Django on Joan Perals — UX Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Nov 2020 22:29:14 +0000</lastBuildDate><atom:link href="/tags/django/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Importing blog posts from Django to Hugo</title>
+      <link>/posts/68/</link>
+      <pubDate>Wed, 18 Nov 2020 22:29:14 +0000</pubDate>
+      
+      <guid>/posts/68/</guid>
+      <description>Last year I started a sort of basic Dango-based sort of simple blog just to jot down small software-related learnings in Markdown.</description>
+    </item>
+    
+    <item>
+      <title>Django&#39;s `pre_save` signal</title>
+      <link>/posts/12/</link>
+      <pubDate>Sat, 28 Jul 2018 22:45:03 +0000</pubDate>
+      
+      <guid>/posts/12/</guid>
+      <description>I found it useful for adding custom created_date and modified_date fields to a model without overriding its save method.
+I&amp;rsquo;d find a method-based syntax nicer, but it&amp;rsquo;s OK.</description>
+    </item>
+    
+    <item>
+      <title>Django-markdown2 doesn&#39;t support fenced code blocks unless explicitly specified</title>
+      <link>/posts/13/</link>
+      <pubDate>Sat, 28 Jul 2018 22:44:53 +0000</pubDate>
+      
+      <guid>/posts/13/</guid>
+      <description>The feature has to be added as an extra feature in the template tag:
+{{ some_text | markdown:&amp;quot;fenced-code-blocks&amp;quot; }}</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jobs/2010-2012-cm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jobs/2010-2012-cm/</guid>
+      <description>One of my main tasks at Content Mind was to take care of the visual layer of a Plone-based health information portal.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jobs/2012-2019-ixds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jobs/2012-2019-ixds/</guid>
+      <description>More than 7 years developing high fidelity prototypes for clients big and small, uncluding Siemens, Bosch, Deutsche Telekom, and leading companies in the German automotive industry, with a strong focus on a user-centric design process.</description>
+    </item>
+    
+  </channel>
+</rss>

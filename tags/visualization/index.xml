@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>visualization on Joan Perals — UX Developer</title>
+    <link>/tags/visualization/</link>
+    <description>Recent content in visualization on Joan Perals — UX Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Colors of Twitter</title>
+      <link>/projects/colors-of-twitter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/colors-of-twitter/</guid>
+      <description>Basically by combining Twitter feed data (100 million tweets and counting) with a language detector (together with some geometric post-processing, and lots of hours of coding), I was able to offer a quite detailed look at the language geography of the Twitter universe.</description>
+    </item>
+    
+  </channel>
+</rss>

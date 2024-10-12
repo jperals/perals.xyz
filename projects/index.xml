@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Joan Perals — UX Developer</title>
+    <link>/projects/</link>
+    <description>Recent content in Projects on Joan Perals — UX Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Big Bother</title>
+      <link>/projects/big-bother/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/big-bother/</guid>
+      <description>Big Bother (sic) is a generative sketch that features an eye on a large screen. This eye has the ability to mutate a little when it detects movement around: a new pupil appears to follow every “target”, with the aim to follow each watcher individually.</description>
+    </item>
+    
+    <item>
+      <title>Colors of Twitter</title>
+      <link>/projects/colors-of-twitter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/colors-of-twitter/</guid>
+      <description>Basically by combining Twitter feed data (100 million tweets and counting) with a language detector (together with some geometric post-processing, and lots of hours of coding), I was able to offer a quite detailed look at the language geography of the Twitter universe.</description>
+    </item>
+    
+    <item>
+      <title>Doodlescript</title>
+      <link>/projects/doodlescript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/doodlescript/</guid>
+      <description>How would computer programming look like if we could reinvent it now from the ground up?
+With this project I wanted to radically question the way we program.</description>
+    </item>
+    
+    <item>
+      <title>Garbuix</title>
+      <link>/projects/garbuix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/garbuix/</guid>
+      <description>Exploring diverse patterns in 2D particle systems, using Processing.
+Garbuix (/gəɾβúʃ/) is the combination of a Processing sketch with a web-based user interface to explore visually interesting behaviours of 2D systems.</description>
+    </item>
+    
+    <item>
+      <title>Spex</title>
+      <link>/projects/spex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/spex/</guid>
+      <description>Spex is a tool to help interdisciplinary teams be aligned on design ideas. As part of a research project at IXDS, we developed a functional MVP of Spex in 12 work days.</description>
+    </item>
+    
+    <item>
+      <title>Terra Cognita</title>
+      <link>/projects/terra-cognita/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/terra-cognita/</guid>
+      <description>As I moved to Berlin in 2012, I started tracking my movements and then wrote an OpenFrameworks app that let me visualize my process of getting to know a new place.</description>
+    </item>
+    
+    <item>
+      <title>ZeroDivs</title>
+      <link>/projects/zerodivs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/zerodivs/</guid>
+      <description>As a web developer I strive to write code that is semantic and concise. And CSS is an often underrated hero that can help you avoid unnecessary scripts and markup.</description>
+    </item>
+    
+  </channel>
+</rss>

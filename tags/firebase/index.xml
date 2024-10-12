@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Firebase on Joan Perals — UX Developer</title>
+    <link>/tags/firebase/</link>
+    <description>Recent content in Firebase on Joan Perals — UX Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/tags/firebase/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spex</title>
+      <link>/projects/spex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/spex/</guid>
+      <description>Spex is a tool to help interdisciplinary teams be aligned on design ideas. As part of a research project at IXDS, we developed a functional MVP of Spex in 12 work days.</description>
+    </item>
+    
+  </channel>
+</rss>

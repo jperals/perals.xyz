@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="Last year I started a sort of basic Dango-based sort of simple blog just to jot down small software-related learnings in Markdown.">
+
+<meta property="og:title" content="Importing blog posts from Django to Hugo" />
+<meta property="og:description" content="Last year I started a sort of basic Dango-based sort of simple blog just to jot down small software-related learnings in Markdown." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/68/" />
+<meta property="article:published_time" content="2020-11-18T22:29:14+00:00" />
+<meta property="article:modified_time" content="2020-11-18T22:29:14+00:00" />
+
+
+<title>
+
+
+     Importing blog posts from Django to Hugo 
+
+</title>
+<link rel="canonical" href="/posts/68/">
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+<link rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css"
+      integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
+
+<link rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/regular.css"
+      integrity="sha384-zkhEzh7td0PG30vxQk1D9liRKeizzot4eqkJ8gB3/I+mZ1rjgQk+BSt2F6rT2c+I" crossorigin="anonymous">
+
+<link rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css"
+      integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
+
+<link rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css"
+      integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
+
+
+<noscript>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css"
+        integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/regular.css"
+        integrity="sha384-zkhEzh7td0PG30vxQk1D9liRKeizzot4eqkJ8gB3/I+mZ1rjgQk+BSt2F6rT2c+I" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css"
+        integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css"
+        integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
+</noscript>
+
+
+
+
+
+
+
+
+<link rel="shortcut icon"
+      
+      href="/img/favicon.png"
+      
+>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+</head>
+
+
+<body lang="">
+
+<main class="wrapper main">
+    <section class="main single" id="projects">
+        <div class="container main">
+            <div class="content">
+                <div class="page-heading">
+  <h1>
+    
+    Importing blog posts from Django to Hugo
+    
+  </h1>
+  
+  <div class="meta date">2020-11-18</div>
+  
+  
+  
+</div>
+
+                <div class="markdown copy-text">
+                    <p>Last year I started a sort of basic Dango-based sort of simple blog just to jot down small software-related learnings in Markdown. I hosted it on Heroku, which is free but sleeps after 30 minutes of inactivity. That&rsquo;s OK for me as a user, but I would not want potential visitors to have to wait for the instance to wake up. At the same time, not sure it&rsquo;s worth paying for Django hosting just for such a minor project.</p>
+<p>Live site: <a href="https://nerdlog.herokuapp.com">https://nerdlog.herokuapp.com</a></p>
+<p>Code: <a href="https://github.com/jperals/dyk">https://github.com/jperals/dyk</a></p>
+<p>Almost in parallel I built my website using Hugo, which is blog-friendly but, being based on static files, doesn&rsquo;t come with the nicer UX that I had already built on my Django site —and I know that I might stop writing if it becomes just a bit uncomfortable to do so.</p>
+<p>Live site: <a href="https://perals.xyz">https://perals.xyz</a></p>
+<p>Code: <a href="https://github.com/jperals/perals.xyz">https://github.com/jperals/perals.xyz</a></p>
+<p>They are two very different systems, but both are based on Markdown, so I built a script to import the posts from the Django site to the Hugo site, which is working quite well. The script is currently part of the code of my website, and it&rsquo;s one single Node.js script with no dependencies (yet?):</p>
+<p><a href="https://github.com/jperals/perals.xyz/tree/master/scripts">https://github.com/jperals/perals.xyz/tree/master/scripts</a></p>
+
+                </div>
+            </div>
+            <div class="right">
+                <a class="button back-button subtle-button" href="../">
+                Back
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<nav class="">
+    <div class="container">
+        
+        <a class="nav-sm site-name" href="/">
+            perals.xyz
+        </a>
+        
+        <a class="nav-sm menu-link">
+            <i class="hamburger-button"></i>
+        </a>
+        <ul class="section-links">
+            <li>
+                <a href="/#intro" title="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+            
+            <li class="primary">
+                <a href="/#projects" >
+                    Projects
+                </a>
+            </li>
+            
+            <li class="primary">
+                <a href="/#professional-experience" >
+                    Professional experience
+                </a>
+            </li>
+            
+            <li class="primary">
+                <a href="/#contact" >
+                    Contact
+                </a>
+            </li>
+            
+            <li class="separator">&nbsp;</li>
+            
+            <li class="secondary">
+                <a href="/posts/" class="active">
+                    Blog
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+<footer class="site-footer">
+
+    <div class="container">
+
+        <p class="footer-heading">
+            <span class="license">
+                <a href="https://creativecommons.org/licenses/by/2.0/">
+                    <i class="far fa-copyright"></i><span class="small">CC BY</span></a>
+            </span>
+            <span>&nbsp;Joan Perals Tresserra, 2019</span>
+        </p>
+        <p class="two-sides-row">
+            <span>Made with love and <a href="https://gohugo.io">Hugo</a>.</span>
+            <span><a href="https://github.com/jperals/perals.xyz">Source code</a></span>
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script type="text/javascript" src="/scripts/nav.js"></script>
+
+
+<script type="text/javascript" src="/scripts/changing-text.js"></script>
+
+
+<script type="text/javascript" src="/scripts/lightbox.js"></script>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-7899353-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>
+

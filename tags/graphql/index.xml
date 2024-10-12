@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GraphQL on Joan Perals — UX Developer</title>
+    <link>/tags/graphql/</link>
+    <description>Recent content in GraphQL on Joan Perals — UX Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/tags/graphql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/jobs/2019-nbt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jobs/2019-nbt/</guid>
+      <description>As a startup incubator, Next Big Thing brought me the chance to get involved in a variety of innovative projects across the whole development cycle —shaping products from the earliest prototyping phases all the way to production.</description>
+    </item>
+    
+  </channel>
+</rss>
