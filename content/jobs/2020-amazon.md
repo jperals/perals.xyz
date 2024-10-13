@@ -5,8 +5,10 @@ company_url: https://aws.amazon.com
 job_title: Frontend Engineer
 location: Berlin
 period: 2020 - present
-tags: [ React.js, Typescript ]
+tags: [React.js, Typescript]
 type: job
 ---
 
-At AWS, a Frontend Engineer's job goes well beyond frontend --and also can have a big impact on many, very real customers who might have very different use cases. Every day brings new challenges and learnings.
+In 2020 I joined Amazon, where I contributed to the launch of the [AWS Systems Manager Quick Setup](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-quick-setup.html) console.
+
+Since 2022 I am part of the team behind [Cloudscape](https://cloudscape.design), the AWS design system.
