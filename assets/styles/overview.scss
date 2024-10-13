@@ -1,14 +1,17 @@
-@import './clip-effect/clip-effect';
-@import './_palette';
-@import './_small_border';
+@import "./clip-effect/clip-effect";
+@import "./_palette";
+@import "./_small_border";
 
 .overview-item {
   position: relative;
-  margin-bottom: 6rem;
+  padding-block: 40px;
+  &.project:not(.last-child) {
+    margin-block-end: 80px;
+  }
   h3 {
     border-bottom: 1px solid transparent;
-    margin-bottom: .2em;
-    padding-bottom: .1em;
+    margin-bottom: 0.2em;
+    padding-bottom: 0.1em;
     display: inline-block;
   }
   .lead {
@@ -29,7 +32,11 @@
     height: 100%;
     left: 0;
     top: 0;
-    background: linear-gradient(240deg, rgb(160, 200, 210), rgb(103, 103, 103) 80%);
+    background: linear-gradient(
+      240deg,
+      rgb(160, 200, 210),
+      rgb(103, 103, 103) 80%
+    );
   }
   .teaser-pic {
     background-position: center;
@@ -49,11 +56,11 @@
 }
 
 .overview-item .tags {
-  opacity: .75;
-  padding-bottom: .85em;
+  opacity: 0.75;
+  padding-bottom: 0.85em;
   .tag {
-    margin-top: .15em;
-    margin-bottom: .15em;
+    margin-top: 0.15em;
+    margin-bottom: 0.15em;
   }
 }
 
@@ -62,9 +69,9 @@
   left: -20px;
   top: -20px;
   height: calc(100% + 40px);
-  content: '';
+  content: "";
   display: block;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
   transform: rotate(7deg);
   width: 260px;
 }
@@ -82,7 +89,7 @@
   }
   // Add some shadow to the texts to make them more legible
   .columns {
-    text-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
   }
   h3,
   .read-more-link {
@@ -109,7 +116,7 @@
 
 @media (min-width: $breakpoint_mid) {
   .overview-item .tags {
-    padding-top: .85em;
+    padding-top: 0.85em;
   }
   .project.overview-item:after {
     width: 45%;
@@ -123,9 +130,4 @@
       margin-right: 20px;
     }
   }
-  .overview-item {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
 }
-

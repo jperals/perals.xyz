@@ -3,14 +3,14 @@
   $color: rgb(255, 255, 255);
   $color: darken($color, $width/2);
   &:before {
-    $margin: calc((100% - #{$width})/2);
-    content: '';
+    $margin: calc((100% - #{$width}) / 2);
+    content: "";
     display: block;
     width: $width;
-    height: 1px;
+    height: 0;
     border-top: 1px solid $color;
     position: absolute;
-    top: -1px;
+    top: 0;
     left: $margin;
     right: $margin;
   }
@@ -24,8 +24,8 @@
   $color: rgb(255, 255, 255);
   $color: darken($color, 25%);
   &:after {
-    $margin: calc((100% - #{$width})/2);
-    content: '';
+    $margin: calc((100% - #{$width}) / 2);
+    content: "";
     display: block;
     width: $width;
     height: 1px;
