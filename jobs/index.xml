@@ -30,7 +30,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/jobs/2010-2010-linka/</guid>
-      <description>Basically, I took care of the implementation of page layouts according to PSD-based documents for various clients. Also some minor photo editing.</description>
+      <description> I took care of the implementation of HTML page layouts based on Photosop references, for various customers. </description>
     </item>
     
     <item>
@@ -39,7 +39,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/jobs/2010-2012-cm/</guid>
-      <description>One of my main tasks at Content Mind was to take care of the visual layer of a Plone-based health information portal.</description>
+      <description>Content Mind was a small Barcelona-based startup behind a health information portal (Nos Cuidamos).
+I took care of the frontend layer of this portal, including te development of a quiz game and a nutrition tracking web app.</description>
     </item>
     
     <item>
@@ -48,7 +49,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/jobs/2012-2019-ixds/</guid>
-      <description>More than 7 years developing high fidelity prototypes for clients big and small, uncluding Siemens, Bosch, Deutsche Telekom, and leading companies in the German automotive industry, with a strong focus on a user-centric design process.</description>
+      <description>In 2012 I joined a small team of talented and innovative folks at the Interaction Design Studios (IXDS) in Berlin.</description>
     </item>
     
     <item>
@@ -57,7 +58,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/jobs/2019-nbt/</guid>
-      <description>As a startup incubator, Next Big Thing brought me the chance to get involved in a variety of innovative projects across the whole development cycle —shaping products from the earliest prototyping phases all the way to production.</description>
+      <description>As a startup incubator, Next Big Thing brought me the chance to get involved in a variety of innovative projects across the whole development cycle —from prototyping to production.</description>
     </item>
     
     <item>
@@ -66,7 +67,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/jobs/2020-amazon/</guid>
-      <description>At AWS, a Frontend Engineer&amp;rsquo;s job goes well beyond frontend &amp;ndash;and also can have a big impact on many, very real customers who might have very different use cases.</description>
+      <description>In 2020 I joined Amazon, where I contributed to the launch of the AWS Systems Manager Quick Setup console.
+Since 2022 I am part of the team behind Cloudscape, the AWS design system.</description>
     </item>
     
   </channel>
